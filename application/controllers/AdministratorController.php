@@ -17,10 +17,10 @@ class AdministratorController extends CI_Controller
     $data['no'] = 1;
     $data['userLogin'] = $this->authModel->getUserLogin()->row_array();
     $data['getAdmin'] = $this->authModel->getAdmin()->result_array();
-    $this->load->view('includes/header', $data);
-    $this->load->view('includes/sidebar', $data);
+    $this->load->view('includes/Admin/header', $data);
+    $this->load->view('includes/Admin/sidebar', $data);
     $this->load->view('pages/auth/viewAdmin', $data);
-    $this->load->view('includes/footer');
+    $this->load->view('includes/Admin/footer');
   }
 
   // Tambah Data Admin
@@ -34,32 +34,5 @@ class AdministratorController extends CI_Controller
     </button>
   </div>');
     redirect('AdministratorController');
-  }
-
-  // DATA CAMAT
-  // get data camat
-  public function camat()
-  {
-    $data['title'] = "Camat";
-    $data['no'] = 1;
-    $data['userLogin'] = $this->authModel->getUserLogin()->row_array();
-    $data['getCamat'] = $this->authModel->getCamat()->result_array();
-    $this->load->view('includes/header', $data);
-    $this->load->view('includes/sidebar', $data);
-    $this->load->view('pages/auth/viewCamat', $data);
-    $this->load->view('includes/footer');
-  }
-
-  // get data petugas
-  public function petugas()
-  {
-    $data['title'] = "Petugas";
-    $data['no'] = 1;
-    $data['userLogin'] = $this->authModel->getUserLogin()->row_array();
-    $data['getPetugas'] = $this->authModel->getPetugas()->result_array();
-    $this->load->view('includes/header', $data);
-    $this->load->view('includes/sidebar', $data);
-    $this->load->view('pages/auth/viewPetugas', $data);
-    $this->load->view('includes/footer');
   }
 }

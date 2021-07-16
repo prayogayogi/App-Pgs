@@ -17,10 +17,10 @@ class DataPendudukController extends CI_Controller
     $data['no'] = 1;
     $data['userLogin'] = $this->authModel->getUserLogin()->row_array();
     $data['penduduk'] = $this->pendudukModel->join()->result_array();
-    $this->load->view('includes/header', $data);
-    $this->load->view('includes/sidebar', $data);
+    $this->load->view('includes/Admin/header', $data);
+    $this->load->view('includes/Admin/sidebar', $data);
     $this->load->view('pages/dashboard/viewDataPenduduk', $data);
-    $this->load->view('includes/footer');
+    $this->load->view('includes/Admin/footer');
   }
 
   // untuk tambah data penduduk
@@ -71,10 +71,10 @@ class DataPendudukController extends CI_Controller
     $data['data'] = $this->pendudukModel->getShow($id)->row_array();
     $data['title'] = 'Detail Data Kartu Keluarga';
     $data['userLogin'] = $this->authModel->getUserLogin()->row_array();
-    $this->load->view('includes/header', $data);
-    $this->load->view('includes/sidebar', $data);
+    $this->load->view('includes/Admin/header', $data);
+    $this->load->view('includes/Admin/sidebar', $data);
     $this->load->view('pages/dashboard/viewDataKartuKeluargaDetail', $data);
-    $this->load->view('includes/footer');
+    $this->load->view('includes/Admin/footer');
   }
   // AKHIR DATA PENDUDUK
 }

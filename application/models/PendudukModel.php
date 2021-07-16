@@ -81,10 +81,6 @@ class PendudukModel extends CI_Model
   // Join
   public function join()
   {
-    $this->db->select('*');
-    $this->db->from('data_penduduk');
-    $this->db->join('status', 'status.pekerjaan = data_penduduk.pekerjaan');
-    $this->db->where_not_in('data_penduduk.status', 'MENINGGAL');
-    return $this->db->get();
+    return $this->db->get('data_penduduk');
   }
 }

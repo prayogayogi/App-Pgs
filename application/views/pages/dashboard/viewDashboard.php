@@ -25,74 +25,9 @@
         <div class="col-lg-3 col-6">
           <div class="small-box bg-info">
             <div class="inner">
-              <h5>Jumlah penduduk</h5>
-              <h4 class="font-weight-bold"><?= $dataPenduduk; ?></h4>
-            </div>
-
-            <!-- <div class="icon">
-              <i class="ion ion-bag"></i>
-            </div> -->
-
-            <a href="<?= base_url('DataPendudukController') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-6">
-          <div class="small-box bg-success">
-            <div class="inner">
-              <h5>Kartu keluarga</h5>
-
-              <h4 class="font-weight-bold"><?= $dataKartuKeluarga; ?></h4>
-            </div>
-
-            <!-- <div class="icon">
-              <i class="ion ion-stats-bars"></i>
-            </div> -->
-
-            <a href="<?= base_url('DataKkController') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-6">
-          <div class="small-box bg-warning">
-            <div class="inner">
-              <h5>Laki-laki</h5>
-
-              <h4 class="font-weight-bold"><?= $dataLakilaki; ?></h4>
-            </div>
-
-            <!-- <div class="icon">
-              <i class="fas fa-mars"></i>
-            </div> -->
-
-            <a href="<?= base_url('DataPendudukController') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-6">
-          <div class="small-box bg-danger">
-            <div class="inner">
-              <h5>Perempuan</h5>
-
-              <h4 class="font-weight-bold"><?= $dataPerempuan; ?></h4>
-            </div>
-
-            <!-- <div class="icon">
-              <i class="fas fa-venus"></i>
-            </div> -->
-
-            <a href="<?= base_url('DataPendudukController') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="content">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-3 col-6">
-          <div class="small-box bg-info">
-            <div class="inner">
               <h5>Lahir</h5>
 
-              <h4 class="font-weight-bold"><?= $dataLahir; ?></h4>
+              <h4 class="font-weight-bold">90</h4>
             </div>
 
             <!-- <div class="icon">
@@ -107,7 +42,7 @@
             <div class="inner">
               <h5>Meniggal</h5>
 
-              <h4 class="font-weight-bold"><?= $dataMeninggal; ?></h4>
+              <h4 class="font-weight-bold">90</h4>
             </div>
 
             <!-- <div class="icon">

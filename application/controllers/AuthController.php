@@ -15,7 +15,7 @@ class AuthController extends CI_Controller
   {
     $data['title'] = "Form Login";
     $this->load->view('includes/auth/login', $data);
-    $this->load->view('pages/registerasi/login');
+    $this->load->view('pages/auth/login');
   }
 
   // action untuk login
