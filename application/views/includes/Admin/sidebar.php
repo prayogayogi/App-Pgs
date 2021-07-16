@@ -55,7 +55,7 @@
             </p>
           </a>
         </li>
-        <li class="nav-header">Data Sekolah</li>
+        <li class="nav-header">Data User Sekolah</li>
         <li class="nav-item">
           <a href="<?= base_url('AdministratorController') ?>" class="nav-link">
             <i class="nav-icon fas fa-user-graduate"></i>
