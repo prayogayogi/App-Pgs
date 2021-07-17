@@ -26,7 +26,7 @@ class AuthController extends CI_Controller
     if ($this->form_validation->run() == FALSE) {
       $data['title'] = "Form Login";
       $this->load->view('includes/auth/login', $data);
-      $this->load->view('pages/registerasi/login');
+      $this->load->view('pages/auth/login');
     } else {
       $email = $this->input->post('email');
       $password = $this->input->post('password');
@@ -66,7 +66,7 @@ class AuthController extends CI_Controller
     }
   }
 
-  // Untuk Logout
+  // Untuk LogOut
   public function logout()
   {
     $this->session->sess_destroy('$session');
@@ -76,7 +76,7 @@ class AuthController extends CI_Controller
       <span aria-hidden="true">&times;</span>
     </button>
   </div>');
-    redirect('authController');
+    redirect('FrontController');
   }
 
 

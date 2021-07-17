@@ -1,11 +1,9 @@
-<footer class="main-footer text-center">
+<footer class="main-footer text-center m-auto">
   <strong>Copyright &copy; 2020-2021 <a href="http://adminlte.io">KodingDev</a>.</strong>
   All rights reserved.
 </footer>
 
-<!-- Control Sidebar -->
 <aside class="control-sidebar control-sidebar-dark">
-  <!-- Control sidebar content goes here -->
 </aside>
 </div>
 

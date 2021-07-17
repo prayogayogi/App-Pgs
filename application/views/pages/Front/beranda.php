@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
       <div class="col-md-8 ftco-animate text-center">
-        <h1 class="mb-4">No Nation Can Prosper In Life Without Education</h1>
+        <h1 class="mb-4">TIDAK ADA BANGSA YANG BISA MAKMUR DALAM HIDUP TANPA PENDIDIKAN</h1>
         <p><a href="#" class="btn btn-primary px-4 py-3">Apply Now</a> <a href="#" class="btn btn-secondary px-4 py-3">View Courses</a></p>
       </div>
     </div>
@@ -14,11 +14,11 @@
   <div class="container">
     <div class="row justify-content-center mb-5 pb-3">
       <div class="col-md-7 heading-section ftco-animate text-center">
-        <h2 class="mb-4">Our Experience Advisor</h2>
+        <h2 class="mb-4">Kepala Sekolah</h2>
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-4 mb-sm-4 ftco-animate">
+      <div class="col-lg-6 mb-sm-4 ftco-animate">
         <div class="staff">
           <div class="d-flex mb-4">
             <div class="img" style="background-image: url(<?= base_url('assets/Tgenius/') ?>images/person_1.jpg);"></div>
@@ -37,29 +37,10 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 mb-sm-4 ftco-animate">
+      <div class="col-lg-6 mb-sm-4 ftco-animate">
         <div class="staff">
           <div class="d-flex mb-4">
             <div class="img" style="background-image: url(<?= base_url('assets/Tgenius/') ?>images/person_2.jpg);"></div>
-            <div class="info ml-4">
-              <h3><a href="teacher-single.html">Ivan Jacobson</a></h3>
-              <span class="position">CSE Teacher</span>
-              <p class="ftco-social d-flex">
-                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a>
-                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a>
-                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a>
-              </p>
-            </div>
-          </div>
-          <div class="text">
-            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-sm-4 ftco-animate">
-        <div class="staff">
-          <div class="d-flex mb-4">
-            <div class="img" style="background-image: url(<?= base_url('assets/Tgenius/') ?>images/person_3.jpg);"></div>
             <div class="info ml-4">
               <h3><a href="teacher-single.html">Ivan Jacobson</a></h3>
               <span class="position">CSE Teacher</span>
@@ -85,7 +66,7 @@
   <div class="container">
     <div class="row d-md-flex justify-content-center">
       <div class="col-md-9 about-video text-center">
-        <h2 class="ftco-animate">Genius University is a Leading Schools Around the World</h2>
+        <h2 class="ftco-animate">SMA NEGRI 5 UJAN MAS ADALAH SEKOLAH TERAKREDITASI (A) DI KABUPATEN KEPAHIANG</h2>
         <div class="video d-flex justify-content-center">
           <a href="https://vimeo.com/45830194" class="button popup-vimeo d-flex justify-content-center align-items-center"><span class="ion-ios-play"></span></a>
         </div>
@@ -102,7 +83,7 @@
             <div class="block-18 text-center">
               <div class="text">
                 <strong class="number" data-number="10300">0</strong>
-                <span>Satisfied Students</span>
+                <span>Jumlah Siwa</span>
               </div>
             </div>
           </div>
@@ -110,7 +91,7 @@
             <div class="block-18 text-center">
               <div class="text">
                 <strong class="number" data-number="7896">0</strong>
-                <span>Courses Completed</span>
+                <span>Jumlah Guru</span>
               </div>
             </div>
           </div>
@@ -118,7 +99,7 @@
             <div class="block-18 text-center">
               <div class="text">
                 <strong class="number" data-number="400">0</strong>
-                <span>Experts Advisors</span>
+                <span>Jumlah Karyawan</span>
               </div>
             </div>
           </div>
@@ -126,7 +107,7 @@
             <div class="block-18 text-center">
               <div class="text">
                 <strong class="number" data-number="200">0</strong>
-                <span>Schools</span>
+                <span>Jumlah Tenaga Pendidikan</span>
               </div>
             </div>
           </div>
@@ -140,7 +121,7 @@
   <div class="container">
     <div class="row justify-content-center mb-5 pb-3">
       <div class="col-md-7 heading-section ftco-animate text-center">
-        <h2 class="mb-4">What Our Student Says</h2>
+        <h2 class="mb-4">Guru-Guru Kami</h2>
       </div>
     </div>
     <div class="row">
@@ -212,7 +193,7 @@
   <div class="container">
     <div class="row justify-content-center mb-5 pb-3">
       <div class="col-md-7 heading-section ftco-animate text-center">
-        <h2 class="mb-4">Recent from blog</h2>
+        <h2 class="mb-4">Berita Terbaru</h2>
       </div>
     </div>
     <div class="row d-flex">
@@ -269,7 +250,7 @@
   <div class="container">
     <div class="row justify-content-center mb-5 pb-3">
       <div class="col-md-7 heading-section ftco-animate text-center">
-        <h2 class="mb-4">Our Latest Events</h2>
+        <h2 class="mb-4">Ekstrakulikuler</h2>
       </div>
     </div>
     <div class="row">

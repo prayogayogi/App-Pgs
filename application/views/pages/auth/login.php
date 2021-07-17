@@ -1,4 +1,4 @@
-<body class="bg-primary">
+<body class="bg-light ">
   <div id="layoutAuthentication">
     <div id="layoutAuthentication_content">
       <main>
@@ -8,27 +8,27 @@
               <div class="card shadow-lg border-0 rounded-lg mt-5">
                 <div class="card-header">
                   <div class="col text-center">
-                    <h3 class="font-weight-light">SILAHKAN LOG IN</h3>
+                    <h3 class="font-weight-light">Silahkan LogIn Disini</h3>
                     <div class="status mt-3">
                       <?= $this->session->flashdata('status'); ?>
                     </div>
-                    <img src="<?= base_url('assets/assetGambar/') ?>logoKabupatenLebong.png" alt="logoKabupatenLebong" style="width:100px;" class="mb-3">
+                    <!-- <img src="<?= base_url('assets/assetGambar/') ?>logoKabupatenLebong.png" alt="logoKabupatenLebong" style="width:100px;" class="mb-3"> -->
                   </div>
                 </div>
                 <div class="card-body">
                   <form action="<?= base_url('AuthController/actionLogin') ?>" method="POST">
                     <div class="form-group">
-                      <label class="small mb-3" for="email">User Name</label>
+                      <label class="small mb-3" for="email">USERNAME</label>
                       <input class="form-control py-4" name="email" id="email" type="text" placeholder="Masukan User Name" autofocus value="<?= set_value('email'); ?>" />
                       <?= form_error('email', '  <small class="text-danger  mb-3 ml-2">', '</small>') ?>
                     </div>
                     <div class="form-group">
-                      <label class="small mb-3" for="password">Password</label>
+                      <label class="small mb-3" for="password">PASSWORD</label>
                       <input class="form-control py-4" name="password" id="password" type="password" placeholder="Masukan Password" />
                       <?= form_error('password', '  <small class="text-danger  mb-3 ml-2">', '</small>') ?>
                     </div>
                     <div class="form-group d-flex align-items-center justify-content-end mt-5 mb-3">
-                      <button class="btn btn-primary" type="submit">Login</button>
+                      <button class="btn btn-dark px-4 py-2" type="submit">Login</button>
                     </div>
                   </form>
                 </div>

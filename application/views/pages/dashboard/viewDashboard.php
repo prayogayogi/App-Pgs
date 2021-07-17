@@ -25,14 +25,14 @@
         <div class="col-lg-3 col-6">
           <div class="small-box bg-info">
             <div class="inner">
-              <h5>Lahir</h5>
+              <h5>Jumlah Data Guru</h5>
 
               <h4 class="font-weight-bold">90</h4>
             </div>
 
-            <!-- <div class="icon">
-              <i class="ion ion-bag"></i>
-            </div> -->
+            <div class="icon">
+              <i class="nav-icon fas fa-user-graduate"></i>
+            </div>
 
             <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
@@ -40,14 +40,14 @@
         <div class="col-lg-3 col-6">
           <div class="small-box bg-success">
             <div class="inner">
-              <h5>Meniggal</h5>
+              <h5>Jumlah Data Siswa</h5>
 
               <h4 class="font-weight-bold">90</h4>
             </div>
 
-            <!-- <div class="icon">
-              <i class="ion ion-stats-bars"></i>
-            </div> -->
+            <div class="icon">
+              <i class="nav-icon fas fa-user-tie"></i>
+            </div>
 
             <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
@@ -55,14 +55,14 @@
         <div class="col-lg-3 col-6">
           <div class="small-box bg-warning">
             <div class="inner">
-              <h5>Pendatang</h5>
+              <h5>Jumlah Siswa Masuk</h5>
 
               <h4 class="font-weight-bold">90</h4>
             </div>
 
-            <!-- <div class="icon">
+            <div class="icon">
               <i class="ion ion-person-add"></i>
-            </div> -->
+            </div>
 
             <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
@@ -70,14 +70,14 @@
         <div class="col-lg-3 col-6">
           <div class="small-box bg-danger">
             <div class="inner">
-              <h5>Pindah</h5>
+              <h5>Jumlah Siswa Pindah</h5>
 
               <h4 class="font-weight-bold">39</h4>
             </div>
 
-            <!-- <div class="icon">
-              <i class="ion ion-pie-graph"></i>
-            </div> -->
+            <div class="icon">
+              <i class="nav-icon fas fa-user-tie"></i>
+            </div>
 
             <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>

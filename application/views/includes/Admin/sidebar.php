@@ -22,7 +22,7 @@
     <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <li class="nav-item has-treeview" style="margin-bottom: -10px;">
-          <a href="<?= base_url('dashboardController') ?>" class="nav-link  <?= (current_url() == base_url('dashboardController')) ? 'active' : '' ?>">
+          <a href="<?= base_url('DashboardController') ?>" class="nav-link <?= (current_url() == base_url('dashboardController')) ? 'active' : '' ?>">
             <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>
               Dashboard
@@ -32,7 +32,7 @@
 
         <li class="nav-header">Asset Sekolah</li>
         <li class="nav-item">
-          <a href="<?= base_url('AdministratorController') ?>" class="nav-link">
+          <a href="<?= base_url('Admin/AssetSekolahController/struktur') ?>" class="nav-link <?= (current_url() == base_url('Admin/AssetSekolahController/struktur')) ? 'active' : '' ?>">
             <i class="nav-icon fas fa-sitemap"></i>
             <p>
               Struktur Organisasi
