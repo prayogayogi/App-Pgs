@@ -22,7 +22,7 @@
     <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <li class="nav-item has-treeview" style="margin-bottom: -10px;">
-          <a href="<?= base_url('DashboardController') ?>" class="nav-link <?= (current_url() == base_url('dashboardController')) ? 'active' : '' ?>">
+          <a href="<?= base_url('DashboardController') ?>" class="nav-link <?= (current_url() == base_url('DashboardController')) ? 'active' : '' ?>">
             <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>
               Dashboard
@@ -40,7 +40,7 @@
           </a>
         </li>
         <li class="nav-item has-treeview ">
-          <a href="<?= base_url('DataPendudukController') ?>" class="nav-link">
+          <a href="<?= base_url('Admin/AssetSekolahController/visiMisi') ?>" class="nav-link <?= (current_url() == base_url('Admin/AssetSekolahController/visiMisi')) ? 'active' : '' ?>">
             <i class="nav-icon fas fa-campground"></i>
             <p>
               Visi & Misi
@@ -48,7 +48,7 @@
           </a>
         </li>
         <li class="nav-item" style="margin-bottom: -10px;">
-          <a href="<?= base_url('AdministratorController') ?>" class="nav-link">
+          <a href="<?= base_url('Admin/AssetSekolahController/dataInformasi') ?>" class="nav-link <?= (current_url() == base_url('Admin/AssetSekolahController/dataInformasi')) ? 'active' : '' ?>">
             <i class="nav-icon fas fa-info-circle"></i>
             <p>
               Data Informasi
@@ -57,7 +57,7 @@
         </li>
         <li class="nav-header">Data User Sekolah</li>
         <li class="nav-item">
-          <a href="<?= base_url('AdministratorController') ?>" class="nav-link">
+          <a href="<?= base_url('Admin/DataUserSekolahController/dataGuru') ?>" class="nav-link <?= (current_url() == base_url('Admin/DataUserSekolahController/dataGuru')) ? 'active' : '' ?>">
             <i class="nav-icon fas fa-user-graduate"></i>
             <p>
               Data Guru
@@ -65,7 +65,7 @@
           </a>
         </li>
         <li class="nav-item" style="margin-bottom: -10px;">
-          <a href="<?= base_url('AdministratorController') ?>" class="nav-link">
+          <a href="<?= base_url('Admin/DataUserSekolahController/dataSiswa') ?>" class="nav-link <?= (current_url() == base_url('Admin/DataUserSekolahController/dataSiswa')) ? 'active' : '' ?>">
             <i class="nav-icon fas fa-user-tie"></i>
             <p>
               Data Siswa
