@@ -38,19 +38,17 @@
                           <tr>
                             <th>No</th>
                             <th>Nama</th>
-                            <th>Alamat</th>
                             <th>Foto</th>
                             <th>Action</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <?php foreach ($getAdmin as $data) : ?>
+                          <?php foreach ($getOrganisasi as $data) : ?>
                             <tr>
                               <td><?= $no++ ?></td>
-                              <td><?= $data['nama']; ?></td>
-                              <td><?= $data['alamat']; ?></td>
+                              <td><?= $data['struktur']; ?></td>
                               <td>
-                                <img src="<?= base_url('/assets/assetGambar/administrator/') . $data['foto'] ?>" alt="administrator" width="40px">
+                                <a href="#" data-toggle="modal" data-target="#exampleOrganisasi"><img src="<?= base_url('/assets/assetGambar/struktur/') . $data['struktur'] ?>" alt="administrator" width="60px"></a>
                               </td>
                               <td>
                                 <a href="#" data-toggle="modal" data-target="#modalUbahDataPenduduk<?= $data['id'] ?>" class="btn btn-primary"><i class="fas fa-pen-square"></i></a>
@@ -78,11 +76,11 @@
 
 
 <!-- Modal untuk tambah data admin -->
-<div class="modal fade" id="exampleModalDataPenduduk" tabindex="-1" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
+<!-- <div class="modal fade" id="exampleModalDataPenduduk" tabindex="-1" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Tambah Data Admin</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Tambah Struktur Organisasi</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -90,33 +88,12 @@
       <div class="modal-body">
         <div class="row">
           <div class="col">
-            <?= form_open_multipart('AdministratorController/tambahDataAdmin'); ?>
+            <?= form_open_multipart('Admin/AssetSekolahController/storeOrganisasi'); ?>
             <div class="row">
               <div class="col">
                 <div class="form-group">
-                  <label for="nama">Nama</label>
-                  <input type="text" name="nama" class="form-control" autocomplete="off" id="nama" placeholder="Masukan Nama" autofocus>
-                </div>
-                <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="text" name="email" class="form-control" id="email" placeholder="Masukan Email">
-                </div>
-                <div class="form-group">
-                  <label for="alamat">Alamat</label>
-                  <input type="text" name="alamat" class="form-control" id="alamat" placeholder="Masukan Alamat">
-                </div>
-                <div class="form-group">
-                  <label for="jabatan">Jabatan</label>
-                  <select class="form-control" name="roles">
-                    <option value="1">-- Pilih Posisi Jabatan --</option>
-                    <option value="1">Admin</option>
-                    <option value="2">Camat</option>
-                    <option value="3">Petugas Desa</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="foto">Photo</label>
-                  <input type="file" name="foto" class="form-control" id="foto" placeholder="Masukan Tempat Tgl Lahir">
+                  <label for="foto">Struktur Organisasi</label>
+                  <input type="file" name="struktur" class="form-control" id="foto">
                 </div>
               </div>
             </div>
@@ -128,10 +105,10 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- Modal Untuk ubah data penduduk -->
-<?php foreach ($getAdmin as $data) : ?>
+<!-- <?php foreach ($getAdmin as $data) : ?>
   <div class="modal fade" id="modalUbahDataPenduduk<?= $data['id'] ?>" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
@@ -170,11 +147,11 @@
       </div>
     </div>
   </div>
-<?php endforeach; ?>
+<?php endforeach; ?> -->
 
 
 <!-- Modal Unutk Detail data Penduduk -->
-<?php foreach ($getAdmin as $data) : ?>
+<!-- <?php foreach ($getAdmin as $data) : ?>
   <div class="modal fade" id="staticBackdrop<?= $data['id'] ?>" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
@@ -213,6 +190,30 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-dark px-4 ml-2 mt-2" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<?php endforeach; ?> -->
+
+
+<!--  Modal Detail Struktur Organisasi -->
+<?php foreach ($getOrganisasi as $data) : ?>
+  <div class="modal fade" id="exampleOrganisasi" tabindex="-1" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Struktur Organisasi</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col">
+              <img src="<?= base_url('/assets/assetGambar/struktur/') . $data['struktur'] ?>" alt="administrator" width="750px" class="text-center">
+            </div>
+          </div>
         </div>
       </div>
     </div>
