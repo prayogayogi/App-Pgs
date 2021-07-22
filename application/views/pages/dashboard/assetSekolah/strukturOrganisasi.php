@@ -52,10 +52,6 @@
                               </td>
                               <td>
                                 <a href="#" data-toggle="modal" data-target="#modalUbahDataPenduduk<?= $data['id'] ?>" class="btn btn-primary"><i class="fas fa-pen-square"></i></a>
-
-                                <a type="submit" href="<?= base_url('DataPendudukController/hapusDataPenduduk/') . $data['id'] ?>" onclick=" return confirm('Yakin Ingin Menghapus.?')" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
-
-                                <a href="#" data-toggle="modal" data-target="#staticBackdrop<?= $data['id'] ?>" class="btn btn-info"><i class="fas fa-plus-square"></i></a>
                               </td>
                             </tr>
                           <?php endforeach; ?>
@@ -75,8 +71,8 @@
 </div>
 
 
-<!-- Modal untuk tambah data admin -->
-<!-- <div class="modal fade" id="exampleModalDataPenduduk" tabindex="-1" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<!-- Modal untuk tambah data Struktur Organisasi -->
+<div class="modal fade" id="exampleModalDataPenduduk" tabindex="-1" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-md">
     <div class="modal-content">
       <div class="modal-header">
@@ -105,15 +101,15 @@
       </div>
     </div>
   </div>
-</div> -->
+</div>
 
 <!-- Modal Untuk ubah data penduduk -->
-<!-- <?php foreach ($getAdmin as $data) : ?>
+<?php foreach ($getOrganisasi as $data) : ?>
   <div class="modal fade" id="modalUbahDataPenduduk<?= $data['id'] ?>" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-md">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Ubah Data Penduduk</h5>
+          <h5 class="modal-title" id="staticBackdropLabel">Ubah Data Struktur Organisasi</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -121,80 +117,26 @@
         <div class="modal-body">
           <div class="row">
             <div class="col">
-              <form action="<?= base_url('DataPendudukController/ubahDataPenduduk/') . $data['id'] ?>" method="POST">
-                <div class="row">
-                  <div class="col">
-                    <div class="form-group">
-                      <label for="nama">Nama</label>
-                      <input type="text" name="nama" class="form-control" id="nama" disabled value="<?= $data['nama'] ?>" autofocus>
-                    </div>
-                    <div class="form-group">
-                      <label for="email">Email</label>
-                      <input type="text" name="email" autocomplete="off" class="form-control" id="email" value="<?= $data['email'] ?>">
-                    </div>
-                    <div class="form-group">
-                      <label for="alamat">Alamat</label>
-                      <input type="text" name="alamat" autocomplete="off" class="form-control" id="alamat" value="<?= $data['alamat'] ?>">
-                    </div>
+              <?= form_open_multipart('Admin/AssetSekolahController/update'); ?>
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <input type="hidden" name="id" value="<?= $data['id'] ?>">
+                    <label for="foto">Struktur Organisasi</label>
+                    <input type="file" name="struktur" class="form-control" id="foto">
                   </div>
                 </div>
-                <button type="submit" class="btn btn-primary mt-2">Simpan</button>
-                <button type="resset" class="btn btn-dark px-4 ml-2 mt-2" data-dismiss="modal">Close</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-<?php endforeach; ?> -->
-
-
-<!-- Modal Unutk Detail data Penduduk -->
-<!-- <?php foreach ($getAdmin as $data) : ?>
-  <div class="modal fade" id="staticBackdrop<?= $data['id'] ?>" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Detail Data Admin</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="card-body">
-            <div class="row">
-              <div class="col text-center mb-4">
-                <img src="<?= base_url('/assets/assetGambar/administrator/') . $data['foto'] ?>" width="120px" alt="" class="img-thumbnail">
               </div>
+              <button type="submit" class="btn btn-primary mt-2">Simpan</button>
+              <button type="resset" class="btn btn-dark px-4 ml-2 mt-2" data-dismiss="modal">Close</button>
+              <?= form_close(); ?>
             </div>
-            <dl class="row justify-content-center">
-              <dt class="col-sm-6">Nama</dt>
-              <dd class="col-sm-6">: <?= $data['nama']; ?></dd>
-              <dt class="col-sm-6">Email</dt>
-              <dd class="col-sm-6">: <?= $data['email']; ?></dd>
-              <dt class="col-sm-6">Nama Desa</dt>
-              <dd class="col-sm-6">: <?= $data['alamat']; ?></dd>
-              <dt class="col-sm-6">Jabatan</dt>
-              <dd class="col-sm-6">:
-                <?php if ($data['roles'] == 1) {
-                  print "Admin";
-                } else if ($data['roles'] == 2) {
-                  print "Camat";
-                } else if ($data['roles'] == 3) {
-                  print "Petugas";
-                } ?>
-              </dd>
-            </dl>
           </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-dark px-4 ml-2 mt-2" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
   </div>
-<?php endforeach; ?> -->
+<?php endforeach; ?>
 
 
 <!--  Modal Detail Struktur Organisasi -->

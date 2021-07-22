@@ -44,13 +44,13 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <?php foreach ($getAdmin as $data) : ?>
+                          <?php foreach ($getGuru as $data) : ?>
                             <tr>
                               <td><?= $no++ ?></td>
                               <td><?= $data['nama']; ?></td>
-                              <td><?= $data['alamat']; ?></td>
+                              <td><?= $data['jabatan']; ?></td>
                               <td>
-                                <img src="<?= base_url('/assets/assetGambar/administrator/') . $data['foto'] ?>" alt="administrator" width="40px">
+                                <img src="<?= base_url('/assets/assetGambar/guru/') . $data['foto'] ?>" alt="administrator" width="40px">
                               </td>
                               <td>
                                 <a href="#" data-toggle="modal" data-target="#modalUbahDataPenduduk<?= $data['id'] ?>" class="btn btn-primary"><i class="fas fa-pen-square"></i></a>
@@ -82,7 +82,7 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Tambah Data Admin</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Tambah Data Guru</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -90,7 +90,7 @@
       <div class="modal-body">
         <div class="row">
           <div class="col">
-            <?= form_open_multipart('AdministratorController/tambahDataAdmin'); ?>
+            <?= form_open_multipart('Admin/DataUserSekolahController/storeGuru'); ?>
             <div class="row">
               <div class="col">
                 <div class="form-group">
@@ -98,21 +98,21 @@
                   <input type="text" name="nama" class="form-control" autocomplete="off" id="nama" placeholder="Masukan Nama" autofocus>
                 </div>
                 <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="text" name="email" class="form-control" id="email" placeholder="Masukan Email">
-                </div>
-                <div class="form-group">
-                  <label for="alamat">Alamat</label>
-                  <input type="text" name="alamat" class="form-control" id="alamat" placeholder="Masukan Alamat">
-                </div>
-                <div class="form-group">
                   <label for="jabatan">Jabatan</label>
-                  <select class="form-control" name="roles">
+                  <select class="form-control" name="jabatan">
                     <option value="1">-- Pilih Posisi Jabatan --</option>
-                    <option value="1">Admin</option>
-                    <option value="2">Camat</option>
-                    <option value="3">Petugas Desa</option>
+                    <option value="KEPALA SEKOLAH">Kepala Sekolah</option>
+                    <option value="GURU">Guru</option>
+                    <option value="KARYAWAN SEKOLAH">Karyawan Sekolah</option>
                   </select>
+                </div>
+                <div class="form-group">
+                  <label for="Mengajar">Mengajar</label>
+                  <input type="text" name="mengajar" class="form-control" id="Mengajar" placeholder="Masukan Mengajar">
+                </div>
+                <div class="form-group">
+                  <label for="deskripsi">Deskripsi</label>
+                  <input type="text" name="deskripsi" class="form-control" id="deskripsi" placeholder="Masukan deskripsi">
                 </div>
                 <div class="form-group">
                   <label for="foto">Photo</label>
@@ -131,7 +131,7 @@
 </div>
 
 <!-- Modal Untuk ubah data penduduk -->
-<?php foreach ($getAdmin as $data) : ?>
+<!-- <?php foreach ($getAdmin as $data) : ?>
   <div class="modal fade" id="modalUbahDataPenduduk<?= $data['id'] ?>" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
@@ -170,11 +170,11 @@
       </div>
     </div>
   </div>
-<?php endforeach; ?>
+<?php endforeach; ?> -->
 
 
 <!-- Modal Unutk Detail data Penduduk -->
-<?php foreach ($getAdmin as $data) : ?>
+<!-- <?php foreach ($getAdmin as $data) : ?>
   <div class="modal fade" id="staticBackdrop<?= $data['id'] ?>" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
@@ -217,4 +217,4 @@
       </div>
     </div>
   </div>
-<?php endforeach; ?>
+<?php endforeach; ?> -->

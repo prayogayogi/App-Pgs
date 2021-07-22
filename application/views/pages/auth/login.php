@@ -17,6 +17,16 @@
                 </div>
                 <div class="card-body">
                   <form action="<?= base_url('AuthController/actionLogin') ?>" method="POST">
+                    <!-- <div class="form-group">
+                      <label class="small mb-3" for="email">ROLES</label>
+                      <select class="custom-select" id="inputGroupSelect01">
+                        <option selected>Choose...</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                      <?= form_error('email', '  <small class="text-danger  mb-3 ml-2">', '</small>') ?>
+                    </div> -->
                     <div class="form-group">
                       <label class="small mb-3" for="email">USERNAME</label>
                       <input class="form-control py-4" name="email" id="email" type="text" placeholder="Masukan User Name" autofocus value="<?= set_value('email'); ?>" />
@@ -28,7 +38,8 @@
                       <?= form_error('password', '  <small class="text-danger  mb-3 ml-2">', '</small>') ?>
                     </div>
                     <div class="form-group d-flex align-items-center justify-content-end mt-5 mb-3">
-                      <button class="btn btn-dark px-4 py-2" type="submit">Login</button>
+                      <a class="btn btn-info px-4 py-2" href="<?= base_url('FrontController') ?>" type="reset">Back</a>
+                      <button class="btn btn-dark px-4 py-2 ml-2" type="submit">Login</button>
                     </div>
                   </form>
                 </div>

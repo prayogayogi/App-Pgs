@@ -44,7 +44,7 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <?php foreach ($getAdmin as $data) : ?>
+                          <!-- <?php foreach ($getAdmin as $data) : ?>
                             <tr>
                               <td><?= $no++ ?></td>
                               <td><?= $data['nama']; ?></td>
@@ -60,7 +60,7 @@
                                 <a href="#" data-toggle="modal" data-target="#staticBackdrop<?= $data['id'] ?>" class="btn btn-info"><i class="fas fa-plus-square"></i></a>
                               </td>
                             </tr>
-                          <?php endforeach; ?>
+                          <?php endforeach; ?> -->
                         </tbody>
                       </table>
                     </div>

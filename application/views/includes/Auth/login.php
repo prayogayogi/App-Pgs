@@ -9,5 +9,7 @@
   <meta name="author" content="" />
   <title><?= $title; ?></title>
   <link href="<?= base_url('assets') ?>/login/styles.css" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="<?= base_url('assets') ?>/plugins/fontawesome-free/css/all.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
 </head>

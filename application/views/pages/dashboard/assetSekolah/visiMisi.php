@@ -3,12 +3,12 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0 text-dark">Data Informasi</h1>
+          <h1 class="m-0 text-dark">Data Visi & Misi</h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="<?= base_url('DashboardController') ?>">Home</a></li>
-            <li class="breadcrumb-item active">Data Informasi</li>
+            <li class="breadcrumb-item active">Data Visi & Misi</li>
           </ol>
         </div>
       </div>
@@ -20,7 +20,7 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">Table Data Informasi</h3>
+              <h3 class="card-title">Data Visi & Misi</h3>
               <div class="status mt-5">
                 <?= $this->session->flashdata('status'); ?>
               </div>
@@ -44,7 +44,7 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <?php foreach ($getAdmin as $data) : ?>
+                          <!-- <?php foreach ($getAdmin as $data) : ?>
                             <tr>
                               <td><?= $no++ ?></td>
                               <td><?= $data['nama']; ?></td>
@@ -60,7 +60,7 @@
                                 <a href="#" data-toggle="modal" data-target="#staticBackdrop<?= $data['id'] ?>" class="btn btn-info"><i class="fas fa-plus-square"></i></a>
                               </td>
                             </tr>
-                          <?php endforeach; ?>
+                          <?php endforeach; ?> -->
                         </tbody>
                       </table>
                     </div>
