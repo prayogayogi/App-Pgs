@@ -3,12 +3,20 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class FrontController extends CI_Controller
 {
+  public function __construct()
+  {
+    parent::__construct();
+    $this->load->model(['FrontModel']);
+  }
+
   // Untuk Halaman Home
   public function index()
   {
     $data['title'] = "PGS | Home";
+    $data['getKepsek'] = $this->FrontModel->getKepsek()->row_array();
+    $data['getWakilKepsek'] = $this->FrontModel->getWakilKepsek()->row_array();
     $this->load->view('includes/Front/header', $data);
-    $this->load->view('pages/Front/beranda');
+    $this->load->view('pages/Front/beranda', $data);
     $this->load->view('includes/Front/footer');
   }
 

@@ -14,7 +14,7 @@
   <div class="container">
     <div class="row justify-content-center mb-5 pb-3">
       <div class="col-md-7 heading-section ftco-animate text-center">
-        <h2 class="mb-4">Kepala Sekolah</h2>
+        <h2 class="mb-4">Pimpinan Sekolah</h2>
       </div>
     </div>
     <div class="row">
@@ -23,8 +23,8 @@
           <div class="d-flex mb-4">
             <div class="img" style="background-image: url(<?= base_url('assets/Tgenius/') ?>images/person_1.jpg);"></div>
             <div class="info ml-4">
-              <h3><a href="teacher-single.html">Ivan Jacobson</a></h3>
-              <span class="position">CSE Teacher</span>
+              <h3><a href="teacher-single.html"><?= $getKepsek['nama']; ?></a></h3>
+              <span class="position"><?= $getKepsek['jabatan']; ?></span>
               <p class="ftco-social d-flex">
                 <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a>
                 <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a>
@@ -33,7 +33,7 @@
             </div>
           </div>
           <div class="text">
-            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
+            <p><?= $getKepsek['deskripsi']; ?></p>
           </div>
         </div>
       </div>
@@ -42,8 +42,8 @@
           <div class="d-flex mb-4">
             <div class="img" style="background-image: url(<?= base_url('assets/Tgenius/') ?>images/person_2.jpg);"></div>
             <div class="info ml-4">
-              <h3><a href="teacher-single.html">Ivan Jacobson</a></h3>
-              <span class="position">CSE Teacher</span>
+              <h3><a href="teacher-single.html"><?= $getWakilKepsek['nama']; ?></a></h3>
+              <span class="position"><?= $getWakilKepsek['jabatan']; ?></span>
               <p class="ftco-social d-flex">
                 <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a>
                 <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a>
@@ -52,7 +52,7 @@
             </div>
           </div>
           <div class="text">
-            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
+            <p><?= $getWakilKepsek['deskripsi']; ?></p>
           </div>
         </div>
       </div>
@@ -246,7 +246,7 @@
   </div>
 </section>
 
-<section class="ftco-section">
+<!-- <section class="ftco-section">
   <div class="container">
     <div class="row justify-content-center mb-5 pb-3">
       <div class="col-md-7 heading-section ftco-animate text-center">
@@ -307,4 +307,4 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->

@@ -7,6 +7,10 @@
 </aside>
 </div>
 
+<script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+<script>
+  CKEDITOR.replace('#deskripsi');
+</script>
 <!-- jQuery -->
 <script src="<?= base_url('assets') ?>/plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
