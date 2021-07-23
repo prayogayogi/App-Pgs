@@ -15,4 +15,11 @@ class FrontModel extends CI_Model
     $where = ['jabatan' => 'WAKIL KEPALA SEKOLAH'];
     return $this->db->get_where('db_guru', $where);
   }
+
+  // Get Data Guru
+  function getGuru()
+  {
+    $where = ['jabatan' => 'GURU'];
+    return $this->db->get_where('db_guru', $where);
+  }
 }

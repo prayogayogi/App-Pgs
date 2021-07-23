@@ -38,29 +38,27 @@
                           <tr>
                             <th>No</th>
                             <th>Nama</th>
-                            <th>Alamat</th>
-                            <th>Foto</th>
+                            <th>No Nis</th>
+                            <th>Tempat Lahir</th>
                             <th>Action</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <!-- <?php foreach ($getAdmin as $data) : ?>
+                          <?php foreach ($getSiswa as $data) : ?>
                             <tr>
                               <td><?= $no++ ?></td>
                               <td><?= $data['nama']; ?></td>
-                              <td><?= $data['alamat']; ?></td>
+                              <td><?= $data['nis']; ?></td>
+                              <td><?= $data['tempat_lahir']; ?></td>
                               <td>
-                                <img src="<?= base_url('/assets/assetGambar/administrator/') . $data['foto'] ?>" alt="administrator" width="40px">
-                              </td>
-                              <td>
-                                <a href="#" data-toggle="modal" data-target="#modalUbahDataPenduduk<?= $data['id'] ?>" class="btn btn-primary"><i class="fas fa-pen-square"></i></a>
+                                <a href="#" data-toggle="modal" data-target="#modalUbahDataGuru<?= $data['id'] ?>" class="btn btn-primary"><i class="fas fa-pen-square"></i></a>
 
-                                <a type="submit" href="<?= base_url('DataPendudukController/hapusDataPenduduk/') . $data['id'] ?>" onclick=" return confirm('Yakin Ingin Menghapus.?')" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+                                <a type="submit" href="<?= base_url('Admin/DataUserSekolahController/destroySiswa/') . $data['id'] ?>" onclick=" return confirm('Yakin Ingin Menghapus.?')" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
 
                                 <a href="#" data-toggle="modal" data-target="#staticBackdrop<?= $data['id'] ?>" class="btn btn-info"><i class="fas fa-plus-square"></i></a>
                               </td>
                             </tr>
-                          <?php endforeach; ?> -->
+                          <?php endforeach; ?>
                         </tbody>
                       </table>
                     </div>
@@ -77,12 +75,12 @@
 </div>
 
 
-<!-- Modal untuk tambah data admin -->
+<!-- Modal untuk tambah data Siswa -->
 <div class="modal fade" id="exampleModalDataPenduduk" tabindex="-1" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Tambah Data Admin</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Tambah Data Siswa</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -90,33 +88,50 @@
       <div class="modal-body">
         <div class="row">
           <div class="col">
-            <?= form_open_multipart('AdministratorController/tambahDataAdmin'); ?>
+            <?= form_open_multipart('Admin/DataUserSekolahController/storeSiswa'); ?>
             <div class="row">
               <div class="col">
                 <div class="form-group">
+                  <label for="nis">No Nis</label>
+                  <input type="number" name="nis" class="form-control" autocomplete="off" id="nis" placeholder="Masukan No Nis" autofocus>
+                </div>
+                <div class="form-group">
+                  <label for="nisn">No Nisn</label>
+                  <input type="number" name="nisn" class="form-control" autocomplete="off" id="nisn" placeholder="Masukan No Nisn">
+                </div>
+                <div class="form-group">
                   <label for="nama">Nama</label>
-                  <input type="text" name="nama" class="form-control" autocomplete="off" id="nama" placeholder="Masukan Nama" autofocus>
+                  <input type="text" name="nama" class="form-control" autocomplete="off" id="nama" placeholder="Masukan Nama">
                 </div>
                 <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="text" name="email" class="form-control" id="email" placeholder="Masukan Email">
-                </div>
-                <div class="form-group">
-                  <label for="alamat">Alamat</label>
-                  <input type="text" name="alamat" class="form-control" id="alamat" placeholder="Masukan Alamat">
-                </div>
-                <div class="form-group">
-                  <label for="jabatan">Jabatan</label>
-                  <select class="form-control" name="roles">
-                    <option value="1">-- Pilih Posisi Jabatan --</option>
-                    <option value="1">Admin</option>
-                    <option value="2">Camat</option>
-                    <option value="3">Petugas Desa</option>
+                  <label for="jabatan">Jenis Kelamin</label>
+                  <select class="form-control" name="jenisKelamin">
+                    <option value="1">-- Pilih Jenis Kelamin --</option>
+                    <option value="LAKI-LAKI">Laki-laki</option>
+                    <option value="PEREMPUAN">Perempuan</option>
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="foto">Photo</label>
-                  <input type="file" name="foto" class="form-control" id="foto" placeholder="Masukan Tempat Tgl Lahir">
+                  <label for="tempatTgl">Tempat Tanggal Lahir</label>
+                  <input type="text" name="tempatLahir" class="form-control" id="tempatTgl" placeholder="Masukan Tempat Tanggal Lahir">
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <label for="tglLahir">Tanggal Lahir</label>
+                  <input type="date" name="tanggalLahir" class="form-control" id="tglLahir" placeholder="Masukan Tanggal Lahir">
+                </div>
+                <div class="form-group">
+                  <label for="namaAyah">Nama Ayah</label>
+                  <input type="text" name="namaAyah" class="form-control" id="namaAyah" placeholder="Masukan Nama Ayah">
+                </div>
+                <div class="form-group">
+                  <label for="namaIbu">Nama Ibu</label>
+                  <input type="text" name="namaIbu" class="form-control" id="namaIbu" placeholder="Masukan Nama Ibu">
+                </div>
+                <div class="form-group">
+                  <label for="agama">Agama</label>
+                  <input type="text" name="agama" class="form-control" id="agama" placeholder="Masukan Agama">
                 </div>
               </div>
             </div>
@@ -130,13 +145,13 @@
   </div>
 </div>
 
-<!-- Modal Untuk ubah data penduduk -->
-<?php foreach ($getAdmin as $data) : ?>
-  <div class="modal fade" id="modalUbahDataPenduduk<?= $data['id'] ?>" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<!-- Modal Untuk ubah data Siswa -->
+<?php foreach ($getSiswa as $data) : ?>
+  <div class="modal fade" id="modalUbahDataGuru<?= $data['id'] ?>" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Ubah Data Penduduk</h5>
+          <h5 class="modal-title" id="staticBackdropLabel">Ubah Data Siswa</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -144,20 +159,50 @@
         <div class="modal-body">
           <div class="row">
             <div class="col">
-              <form action="<?= base_url('DataPendudukController/ubahDataPenduduk/') . $data['id'] ?>" method="POST">
+              <form action="<?= base_url('Admin/DataUserSekolahController/updateSiswa/') . $data['id'] ?>" method="POST">
                 <div class="row">
                   <div class="col">
                     <div class="form-group">
+                      <label for="nis">No Nis</label>
+                      <input type="number" name="nis" class="form-control" autocomplete="off" id="nis" value="<?= $data['nis']; ?>">
+                    </div>
+                    <div class="form-group">
+                      <label for="nisn">No Nisn</label>
+                      <input type="number" name="nisn" class="form-control" autocomplete="off" id="nisn" value="<?= $data['nisn']; ?>">
+                    </div>
+                    <div class="form-group">
                       <label for="nama">Nama</label>
-                      <input type="text" name="nama" class="form-control" id="nama" disabled value="<?= $data['nama'] ?>" autofocus>
+                      <input type="text" name="nama" class="form-control" autocomplete="off" id="nama" value="<?= $data['nama']; ?>">
                     </div>
                     <div class="form-group">
-                      <label for="email">Email</label>
-                      <input type="text" name="email" autocomplete="off" class="form-control" id="email" value="<?= $data['email'] ?>">
+                      <label for="jabatan">Jenis Kelamin</label>
+                      <select class="form-control" name="jenisKelamin">
+                        <option value="<?= $data['jenis_kelamin']; ?>"><?= $data['jenis_kelamin']; ?></option>
+                        <option value="LAKI-LAKI">Laki-laki</option>
+                        <option value="PEREMPUAN">Perempuan</option>
+                      </select>
                     </div>
                     <div class="form-group">
-                      <label for="alamat">Alamat</label>
-                      <input type="text" name="alamat" autocomplete="off" class="form-control" id="alamat" value="<?= $data['alamat'] ?>">
+                      <label for="tempatTgl">Tempat Tanggal Lahir</label>
+                      <input type="text" name="tempatLahir" class="form-control" id="tempatTgl" value="<?= $data['tempat_lahir']; ?>">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="tglLahir">Tanggal Lahir</label>
+                      <input type="date" name="tanggalLahir" class="form-control" id="tglLahir" value="<?= $data['tanggal_lahir']; ?>">
+                    </div>
+                    <div class="form-group">
+                      <label for="namaAyah">Nama Ayah</label>
+                      <input type="text" name="namaAyah" class="form-control" id="namaAyah" value="<?= $data['nama_ayah']; ?>">
+                    </div>
+                    <div class="form-group">
+                      <label for="namaIbu">Nama Ibu</label>
+                      <input type="text" name="namaIbu" class="form-control" id="namaIbu" value="<?= $data['nama_ibu']; ?>">
+                    </div>
+                    <div class="form-group">
+                      <label for="agama">Agama</label>
+                      <input type="text" name="agama" class="form-control" id="agama" value="<?= $data['agama']; ?>">
                     </div>
                   </div>
                 </div>
@@ -173,41 +218,39 @@
 <?php endforeach; ?>
 
 
-<!-- Modal Unutk Detail data Penduduk -->
-<?php foreach ($getAdmin as $data) : ?>
+<!-- Modal Unutk Detail data Siswa -->
+<?php foreach ($getSiswa as $data) : ?>
   <div class="modal fade" id="staticBackdrop<?= $data['id'] ?>" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Detail Data Admin</h5>
+          <h5 class="modal-title" id="staticBackdropLabel">Detail Data Siswa</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
           <div class="card-body">
-            <div class="row">
+            <!-- <div class="row">
               <div class="col text-center mb-4">
                 <img src="<?= base_url('/assets/assetGambar/administrator/') . $data['foto'] ?>" width="120px" alt="" class="img-thumbnail">
               </div>
-            </div>
+            </div> -->
             <dl class="row justify-content-center">
               <dt class="col-sm-6">Nama</dt>
               <dd class="col-sm-6">: <?= $data['nama']; ?></dd>
-              <dt class="col-sm-6">Email</dt>
-              <dd class="col-sm-6">: <?= $data['email']; ?></dd>
-              <dt class="col-sm-6">Nama Desa</dt>
-              <dd class="col-sm-6">: <?= $data['alamat']; ?></dd>
-              <dt class="col-sm-6">Jabatan</dt>
-              <dd class="col-sm-6">:
-                <?php if ($data['roles'] == 1) {
-                  print "Admin";
-                } else if ($data['roles'] == 2) {
-                  print "Camat";
-                } else if ($data['roles'] == 3) {
-                  print "Petugas";
-                } ?>
-              </dd>
+              <dt class="col-sm-6">Jenis Kelamin</dt>
+              <dd class="col-sm-6">: <?= $data['jenis_kelamin']; ?></dd>
+              <dt class="col-sm-6">Tempat Tanggal Lahir</dt>
+              <dd class="col-sm-6">: <?= $data['tempat_lahir']; ?></dd>
+              <dt class="col-sm-6">Tanggal Lahir</dt>
+              <dd class="col-sm-6">: <?= $data['tanggal_lahir']; ?></dd>
+              <dt class="col-sm-6">Nama Ayah</dt>
+              <dd class="col-sm-6">: <?= $data['nama_ayah']; ?></dd>
+              <dt class="col-sm-6">Nama Ibu</dt>
+              <dd class="col-sm-6">: <?= $data['nama_ibu']; ?></dd>
+              <dt class="col-sm-6">Agama</dt>
+              <dd class="col-sm-6">: <?= $data['agama']; ?></dd>
             </dl>
           </div>
         </div>

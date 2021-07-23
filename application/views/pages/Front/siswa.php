@@ -14,178 +14,35 @@
   <div class="container">
     <div class="row justify-content-center mb-5 pb-3">
       <div class="col-md-7 heading-section ftco-animate text-center">
-        <h2 class="mb-4">Siswa-Siswa Kami</h2>
+        <h2 class="mb-0">Siswa-Siswa Kami</h2>
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-4 mb-sm-4 ftco-animate">
-        <div class="staff">
-          <div class="d-flex mb-4">
-            <div class="img" style="background-image: url(<?= base_url('assets/Tgenius/') ?>images/person_1.jpg);"></div>
-            <div class="info ml-4">
-              <h3><a href="teacher-single.html">Ivan Jacobson</a></h3>
-              <span class="position">CSE Teacher</span>
-              <p class="ftco-social d-flex">
-                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a>
-                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a>
-                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a>
-              </p>
-            </div>
-          </div>
-          <div class="text">
-            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-sm-4 ftco-animate">
-        <div class="staff">
-          <div class="d-flex mb-4">
-            <div class="img" style="background-image: url(<?= base_url('assets/Tgenius/') ?>images/person_2.jpg);"></div>
-            <div class="info ml-4">
-              <h3><a href="teacher-single.html">Ivan Jacobson</a></h3>
-              <span class="position">CSE Teacher</span>
-              <p class="ftco-social d-flex">
-                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a>
-                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a>
-                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a>
-              </p>
-            </div>
-          </div>
-          <div class="text">
-            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-sm-4 ftco-animate">
-        <div class="staff">
-          <div class="d-flex mb-4">
-            <div class="img" style="background-image: url(<?= base_url('assets/Tgenius/') ?>images/person_3.jpg);"></div>
-            <div class="info ml-4">
-              <h3><a href="teacher-single.html">Ivan Jacobson</a></h3>
-              <span class="position">CSE Teacher</span>
-              <p class="ftco-social d-flex">
-                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a>
-                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a>
-                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a>
-              </p>
-            </div>
-          </div>
-          <div class="text">
-            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-sm-4 ftco-animate">
-        <div class="staff">
-          <div class="d-flex mb-4">
-            <div class="img" style="background-image: url(<?= base_url('assets/Tgenius/') ?>images/person_4.jpg);"></div>
-            <div class="info ml-4">
-              <h3><a href="teacher-single.html">Ivan Jacobson</a></h3>
-              <span class="position">CSE Teacher</span>
-              <p class="ftco-social d-flex">
-                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a>
-                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a>
-                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a>
-              </p>
-            </div>
-          </div>
-          <div class="text">
-            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-sm-4 ftco-animate">
-        <div class="staff">
-          <div class="d-flex mb-4">
-            <div class="img" style="background-image: url(<?= base_url('assets/Tgenius/') ?>images/person_5.jpg);"></div>
-            <div class="info ml-4">
-              <h3><a href="teacher-single.html">Ivan Jacobson</a></h3>
-              <span class="position">CSE Teacher</span>
-              <p class="ftco-social d-flex">
-                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a>
-                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a>
-                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a>
-              </p>
-            </div>
-          </div>
-          <div class="text">
-            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-sm-4 ftco-animate">
-        <div class="staff">
-          <div class="d-flex mb-4">
-            <div class="img" style="background-image: url(<?= base_url('assets/Tgenius/') ?>images/person_6.jpg);"></div>
-            <div class="info ml-4">
-              <h3><a href="teacher-single.html">Ivan Jacobson</a></h3>
-              <span class="position">CSE Teacher</span>
-              <p class="ftco-social d-flex">
-                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a>
-                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a>
-                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a>
-              </p>
-            </div>
-          </div>
-          <div class="text">
-            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-sm-4 ftco-animate">
-        <div class="staff">
-          <div class="d-flex mb-4">
-            <div class="img" style="background-image: url(<?= base_url('assets/Tgenius/') ?>images/person_7.jpg);"></div>
-            <div class="info ml-4">
-              <h3><a href="teacher-single.html">Ivan Jacobson</a></h3>
-              <span class="position">CSE Teacher</span>
-              <p class="ftco-social d-flex">
-                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a>
-                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a>
-                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a>
-              </p>
-            </div>
-          </div>
-          <div class="text">
-            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-sm-4 ftco-animate">
-        <div class="staff">
-          <div class="d-flex mb-4">
-            <div class="img" style="background-image: url(<?= base_url('assets/Tgenius/') ?>images/person_8.jpg);"></div>
-            <div class="info ml-4">
-              <h3><a href="teacher-single.html">Ivan Jacobson</a></h3>
-              <span class="position">CSE Teacher</span>
-              <p class="ftco-social d-flex">
-                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a>
-                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a>
-                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a>
-              </p>
-            </div>
-          </div>
-          <div class="text">
-            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-sm-4 ftco-animate">
-        <div class="staff">
-          <div class="d-flex mb-4">
-            <div class="img" style="background-image: url(<?= base_url('assets/Tgenius/') ?>images/person_9.jpg);"></div>
-            <div class="info ml-4">
-              <h3><a href="teacher-single.html">Ivan Jacobson</a></h3>
-              <span class="position">CSE Teacher</span>
-              <p class="ftco-social d-flex">
-                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a>
-                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-facebook"></span></a>
-                <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a>
-              </p>
-            </div>
-          </div>
-          <div class="text">
-            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
+      <div class="col-lg-12 mb-sm-4 ftco-animate">
+        <div class="card">
+          <div class="card-body">
+            <table id="example2" class="table text-center table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Nama</th>
+                  <th>Agama</th>
+                  <th>Jenis Kelamin</th>
+                  <th>Tempat Lahir</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php foreach ($getSiswa as $data) : ?>
+                  <tr>
+                    <td><?= $no++; ?></td>
+                    <td><?= $data['nama']; ?></td>
+                    <td><?= $data['agama']; ?></td>
+                    <td><?= $data['jenis_kelamin']; ?></td>
+                    <td><?= $data['tempat_lahir']; ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

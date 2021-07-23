@@ -2,13 +2,12 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 class DataUserSekolahModel extends CI_Model
 {
+  // UNTUK DATA GURU
   // Get Data Guru
   function getGuru()
   {
     return $this->db->get('db_guru');
   }
-
-
 
   // Store Data Guru
   function storeGuru()
@@ -34,5 +33,65 @@ class DataUserSekolahModel extends CI_Model
       'deskripsi' => $this->input->post('deskripsi')
     ];
     $this->db->insert('db_guru', $data);
+  }
+
+  // Destroy Data Guru
+  function destroy($id)
+  {
+    $foto = $this->db->get_where('db_guru', ['id' => $id])->row_array();
+    unlink(FCPATH . './assets/assetGambar/guru/' . $foto['foto']);
+    $this->db->where(['id' => $id]);
+    $this->db->delete('db_guru');
+  }
+
+  // UNTUK DATA SISWA
+  // Get Data Siswa
+  function getSiswa()
+  {
+    return $this->db->get('db_siswa');
+  }
+
+  // Store Data Siswa
+  function storeSiswa()
+  {
+    $data = [
+      'nis' => $this->input->post('nis'),
+      'nisn' => $this->input->post('nisn'),
+      'nama' => ucwords(trim($this->input->post('nama'))),
+      'jenis_kelamin' => $this->input->post('jenisKelamin'),
+      'tempat_lahir' => ucwords(trim($this->input->post('tempatLahir'))),
+      'tanggal_lahir' => $this->input->post('tanggalLahir'),
+      'nama_ayah' => ucwords(trim($this->input->post('namaAyah'))),
+      'nama_ibu' => ucwords(trim($this->input->post('namaIbu'))),
+      'agama' => ucwords(trim($this->input->post('agama')))
+    ];
+    $this->db->set($data);
+    $this->db->insert('db_siswa');
+  }
+
+  // Update Data Siswa
+  function updateSiswa($id)
+  {
+    $data = [
+      'nis' => $this->input->post('nis'),
+      'nisn' => $this->input->post('nisn'),
+      'nama' => ucwords(trim($this->input->post('nama'))),
+      'jenis_kelamin' => $this->input->post('jenisKelamin'),
+      'tempat_lahir' => ucwords(trim($this->input->post('tempatLahir'))),
+      'tanggal_lahir' => $this->input->post('tanggalLahir'),
+      'nama_ayah' => ucwords(trim($this->input->post('namaAyah'))),
+      'nama_ibu' => ucwords(trim($this->input->post('namaIbu'))),
+      'agama' => ucwords(trim($this->input->post('agama')))
+    ];
+    $this->db->set($data);
+    $this->db->where(['id' => $id]);
+    $this->db->update('db_siswa');
+  }
+
+  // Destroy Data Siswa
+  function destroySiswa($id)
+  {
+    $this->db->where(['id' => $id]);
+    $this->db->delete('db_siswa');
   }
 }

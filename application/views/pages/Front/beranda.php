@@ -82,7 +82,7 @@
           <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18 text-center">
               <div class="text">
-                <strong class="number" data-number="10300">0</strong>
+                <strong class="number" data-number="<?= $getJumlahSiswa; ?>">0</strong>
                 <span>Jumlah Siwa</span>
               </div>
             </div>
@@ -90,7 +90,7 @@
           <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18 text-center">
               <div class="text">
-                <strong class="number" data-number="7896">0</strong>
+                <strong class="number" data-number="<?= $getJumlahGuru; ?>">0</strong>
                 <span>Jumlah Guru</span>
               </div>
             </div>
@@ -127,62 +127,22 @@
     <div class="row">
       <div class="col-md-12 ftco-animate">
         <div class="carousel-testimony owl-carousel">
-          <div class="item">
-            <div class="testimony-wrap text-center">
-              <div class="user-img mb-5" style="background-image: url(<?= base_url('assets/Tgenius/') ?>images/person_1.jpg)">
-                <span class="quote d-flex align-items-center justify-content-center">
-                  <i class="icon-quote-left"></i>
-                </span>
-              </div>
-              <div class="text">
-                <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                <p class="name">Dennis Green</p>
-                <span class="position">CSE Student</span>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="testimony-wrap text-center">
-              <div class="user-img mb-5" style="background-image: url(<?= base_url('assets/Tgenius/') ?>images/person_2.jpg)">
-                <span class="quote d-flex align-items-center justify-content-center">
-                  <i class="icon-quote-left"></i>
-                </span>
-              </div>
-              <div class="text">
-                <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                <p class="name">Dennis Green</p>
-                <span class="position">Math Student</span>
+          <?php foreach ($getGuru as $data) : ?>
+            <div class="item">
+              <div class="testimony-wrap text-center">
+                <div class="user-img mb-5" style="background-image: url(<?= base_url('assets/assetGambar/guru/') . $data['foto'] ?>)">
+                  <span class="quote d-flex align-items-center justify-content-center">
+                    <i class="icon-quote-left"></i>
+                  </span>
+                </div>
+                <div class="text">
+                  <p class="mb-5"><?= $data['deskripsi']; ?></p>
+                  <p class="name"><?= $data['nama']; ?></p>
+                  <span class="position"><?= $data['mengajar']; ?></span>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="item">
-            <div class="testimony-wrap text-center">
-              <div class="user-img mb-5" style="background-image: url(<?= base_url('assets/Tgenius/') ?>images/person_3.jpg)">
-                <span class="quote d-flex align-items-center justify-content-center">
-                  <i class="icon-quote-left"></i>
-                </span>
-              </div>
-              <div class="text">
-                <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                <p class="name">Dennis Green</p>
-                <span class="position">Science Students</span>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="testimony-wrap text-center">
-              <div class="user-img mb-5" style="background-image: url(<?= base_url('assets/Tgenius/') ?>images/person_3.jpg)">
-                <span class="quote d-flex align-items-center justify-content-center">
-                  <i class="icon-quote-left"></i>
-                </span>
-              </div>
-              <div class="text">
-                <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                <p class="name">Dennis Green</p>
-                <span class="position">English Student</span>
-              </div>
-            </div>
-          </div>
+          <?php endforeach; ?>
         </div>
       </div>
     </div>

@@ -27,7 +27,7 @@
             <div class="inner">
               <h5>Jumlah Data Guru</h5>
 
-              <h4 class="font-weight-bold">90</h4>
+              <h4 class="font-weight-bold"><?= $numGuru; ?></h4>
             </div>
 
             <div class="icon">
@@ -42,7 +42,7 @@
             <div class="inner">
               <h5>Jumlah Data Siswa</h5>
 
-              <h4 class="font-weight-bold">90</h4>
+              <h4 class="font-weight-bold"><?= $numSiswa; ?></h4>
             </div>
 
             <div class="icon">
