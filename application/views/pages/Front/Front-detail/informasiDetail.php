@@ -21,7 +21,7 @@
         </p>
         <div class="about-author d-flex p-5 bg-light">
           <div class="bio align-self-md-center mr-5">
-            <img src="<?= base_url('assets/Tgenius/') ?>images/person_1.jpg" alt="Image placeholder" class="img-fluid mb-4">
+            <img src="<?= base_url('assets/assetGambar/administrator/') . $fotoOunerPost['foto'] ?>" alt="Image placeholder" class="img-fluid mb-4">
           </div>
           <div class="desc align-self-md-center">
             <small>Post By</small>

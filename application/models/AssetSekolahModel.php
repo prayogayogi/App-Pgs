@@ -81,6 +81,14 @@ class AssetSekolahModel extends CI_Model
     return $this->db->get('db_informasi');
   }
 
+  // Get New Footer Data Informasi
+  public function getNewFooterInformasi()
+  {
+    $this->db->order_by('id', 'DESC');
+    $this->db->limit(2);
+    return $this->db->get('db_informasi');
+  }
+
   // Store Data Informasi
   public function storeInformasi()
   {

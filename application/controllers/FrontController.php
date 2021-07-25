@@ -18,19 +18,22 @@ class FrontController extends CI_Controller
     $data['getGuru'] = $this->FrontModel->getGuru()->result_array();
     $data['getJumlahGuru'] = $this->DataUserSekolahModel->getGuru()->num_rows();
     $data['getJumlahSiswa'] = $this->DataUserSekolahModel->getSiswa()->num_rows();
-    $data['getInformasi'] = $this->AssetSekolahModel->getNewInformasi()->result_array();
+    $data['getNewInformasi'] = $this->AssetSekolahModel->getNewInformasi()->result_array();
+    $data['getNewFooterInformasi'] = $this->AssetSekolahModel->getNewFooterInformasi()->result_array();
     $this->load->view('includes/Front/header', $data);
     $this->load->view('pages/Front/beranda', $data);
-    $this->load->view('includes/Front/footer');
+    $this->load->view('includes/Front/footer', $data);
   }
 
   // Untuk Halaman Profile
   public function profile()
   {
     $data['title'] = "PGS | Profile";
+    $data['getStrukturOrganisasi'] = $this->FrontModel->getStrukturOrganisasi()->row_array();
+    $data['getNewFooterInformasi'] = $this->AssetSekolahModel->getNewFooterInformasi()->result_array();
     $this->load->view('includes/Front/header', $data);
     $this->load->view('pages/Front/profile');
-    $this->load->view('includes/Front/footer');
+    $this->load->view('includes/Front/footer', $data);
   }
 
   // Untuk Halaman Guru
@@ -38,9 +41,10 @@ class FrontController extends CI_Controller
   {
     $data['title'] = "PGS | Guru";
     $data['getGuru'] = $this->DataUserSekolahModel->getGuru()->result_array();
+    $data['getNewFooterInformasi'] = $this->AssetSekolahModel->getNewFooterInformasi()->result_array();
     $this->load->view('includes/Front/header', $data);
     $this->load->view('pages/Front/guru', $data);
-    $this->load->view('includes/Front/footer');
+    $this->load->view('includes/Front/footer', $data);
   }
 
   // Untuk Halaman Siswa
@@ -49,18 +53,20 @@ class FrontController extends CI_Controller
     $data['title'] = "PGS | Siswa";
     $data['no'] = 1;
     $data['getSiswa'] = $this->DataUserSekolahModel->getSiswa()->result_array();
+    $data['getNewFooterInformasi'] = $this->AssetSekolahModel->getNewFooterInformasi()->result_array();
     $this->load->view('includes/Front/header', $data);
     $this->load->view('pages/Front/siswa', $data);
-    $this->load->view('includes/Front/footer');
+    $this->load->view('includes/Front/footer', $data);
   }
 
   // Untuk Halaman Ekskul
   public function ekskul()
   {
     $data['title'] = "PGS | Ekskul";
+    $data['getNewFooterInformasi'] = $this->AssetSekolahModel->getNewFooterInformasi()->result_array();
     $this->load->view('includes/Front/header', $data);
     $this->load->view('pages/Front/ekskul');
-    $this->load->view('includes/Front/footer');
+    $this->load->view('includes/Front/footer', $data);
   }
 
   // Untuk Halaman Informasi
@@ -68,8 +74,9 @@ class FrontController extends CI_Controller
   {
     $data['title'] = "PGS | Informasi";
     $data['getInformasi'] = $this->AssetSekolahModel->getInformasi()->result_array();
+    $data['getNewFooterInformasi'] = $this->AssetSekolahModel->getNewFooterInformasi()->result_array();
     $this->load->view('includes/Front/header', $data);
     $this->load->view('pages/Front/informasi', $data);
-    $this->load->view('includes/Front/footer');
+    $this->load->view('includes/Front/footer', $data);
   }
 }

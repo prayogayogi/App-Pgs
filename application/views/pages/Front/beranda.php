@@ -4,7 +4,7 @@
     <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
       <div class="col-md-8 ftco-animate text-center">
         <h1 class="mb-4">TIDAK ADA BANGSA YANG BISA MAKMUR DALAM HIDUP TANPA PENDIDIKAN</h1>
-        <p><a href="#" class="btn btn-primary px-4 py-3">Apply Now</a> <a href="#" class="btn btn-secondary px-4 py-3">View Courses</a></p>
+        <p><a href="#" class="btn btn-primary px-4 py-3">Hubunggi Kami</a></p>
       </div>
     </div>
   </div>
@@ -60,7 +60,6 @@
   </div>
 </section>
 
-
 <section class="ftco-section-3 img" style="background-image: url(<?= base_url('assets/Tgenius/') ?>images/bg_3.jpg);">
   <div class="overlay"></div>
   <div class="container">
@@ -68,7 +67,7 @@
       <div class="col-md-9 about-video text-center">
         <h2 class="ftco-animate">SMA NEGRI 5 UJAN MAS ADALAH SEKOLAH TERAKREDITASI (A) DI KABUPATEN KEPAHIANG</h2>
         <div class="video d-flex justify-content-center">
-          <a href="https://vimeo.com/45830194" class="button popup-vimeo d-flex justify-content-center align-items-center"><span class="ion-ios-play"></span></a>
+          <a href="https://youtu.be/nbTguNnjYwM" class="button popup-vimeo d-flex justify-content-center align-items-center"><span class="ion-ios-play"></span></a>
         </div>
       </div>
     </div>
@@ -79,7 +78,7 @@
     <div class="row justify-content-center">
       <div class="col-md-10">
         <div class="row">
-          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+          <div class="col-md-6 d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18 text-center">
               <div class="text">
                 <strong class="number" data-number="<?= $getJumlahSiswa; ?>">0</strong>
@@ -87,27 +86,11 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+          <div class="col-md-6 d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18 text-center">
               <div class="text">
                 <strong class="number" data-number="<?= $getJumlahGuru; ?>">0</strong>
                 <span>Jumlah Guru</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18 text-center">
-              <div class="text">
-                <strong class="number" data-number="400">0</strong>
-                <span>Jumlah Karyawan</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18 text-center">
-              <div class="text">
-                <strong class="number" data-number="200">0</strong>
-                <span>Jumlah Tenaga Pendidikan</span>
               </div>
             </div>
           </div>
@@ -157,7 +140,7 @@
       </div>
     </div>
     <div class="row d-flex">
-      <?php foreach ($getInformasi as $data) : ?>
+      <?php foreach ($getNewInformasi as $data) : ?>
         <div class="col-md-4 d-flex ftco-animate">
           <div class="blog-entry align-self-stretch">
             <a href="<?= base_url('FrontDetailController/getDetaiInformasi/') . $data['id'] ?>" class="block-20" style="background-image: url('<?= base_url('/assets/assetGambar/informasi/') . $data['foto'] ?>');">

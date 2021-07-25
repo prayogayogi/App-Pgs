@@ -16,28 +16,19 @@
       <div class="col-md-4">
         <div class="ftco-footer-widget mb-4">
           <h2 class="ftco-heading-2">Berita Terbaru</h2>
-          <div class="block-21 mb-4 d-flex">
-            <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
-            <div class="text">
-              <h3 class="heading"><a href="#">Smk N 05 Ujan Mas Mendapatkan Penghargaan Sebagai Sekolah Berkualitas</a></h3>
-              <div class="meta">
-                <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
-                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+          <?php foreach ($getNewFooterInformasi as $data) : ?>
+            <div class="block-21 mb-4 d-flex">
+              <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
+              <div class="text">
+                <h3 class="heading"><a href="<?= base_url('FrontDetailController/getDetaiInformasi/') . $data['id'] ?>"><?= $data['judul']; ?></a></h3>
+                <div class="meta">
+                  <div><a href="#"><span class="icon-calendar"></span> <?= date("d/ M/ Y", $data['created_at'],); ?></a></div>
+                  <div><a href="#"><span class="icon-person"></span> <?= $data['ouner_post']; ?></a></div>
+                  <div><a href="#"><span class="icon-chat"></span> Berita Terbaru</a></div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="block-21 mb-4 d-flex">
-            <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
-            <div class="text">
-              <h3 class="heading"><a href="#">Mulai September 2021 Pembelajarkan akan tatap muka.</a></h3>
-              <div class="meta">
-                <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
-                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-              </div>
-            </div>
-          </div>
+          <?php endforeach; ?>
         </div>
       </div>
       <div class="col-md-2">
@@ -66,20 +57,15 @@
     </div>
     <div class="row">
       <div class="col-md-12 text-center">
-
         <p>
-          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
           Copyright &copy;<script>
             document.write(new Date().getFullYear());
           </script> All rights reserved | Modif template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="#" target="_blank">KodingDev</a>
-          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
         </p>
       </div>
     </div>
   </div>
 </footer>
-
-
 
 <!-- loader -->
 <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
