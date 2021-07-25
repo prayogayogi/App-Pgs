@@ -6,7 +6,7 @@ class FrontController extends CI_Controller
   public function __construct()
   {
     parent::__construct();
-    $this->load->model(['FrontModel', 'DataUserSekolahModel']);
+    $this->load->model(['FrontModel', 'DataUserSekolahModel', 'AssetSekolahModel']);
   }
 
   // Untuk Halaman Home
@@ -18,6 +18,7 @@ class FrontController extends CI_Controller
     $data['getGuru'] = $this->FrontModel->getGuru()->result_array();
     $data['getJumlahGuru'] = $this->DataUserSekolahModel->getGuru()->num_rows();
     $data['getJumlahSiswa'] = $this->DataUserSekolahModel->getSiswa()->num_rows();
+    $data['getInformasi'] = $this->AssetSekolahModel->getNewInformasi()->result_array();
     $this->load->view('includes/Front/header', $data);
     $this->load->view('pages/Front/beranda', $data);
     $this->load->view('includes/Front/footer');
@@ -66,8 +67,9 @@ class FrontController extends CI_Controller
   public function informasi()
   {
     $data['title'] = "PGS | Informasi";
+    $data['getInformasi'] = $this->AssetSekolahModel->getInformasi()->result_array();
     $this->load->view('includes/Front/header', $data);
-    $this->load->view('pages/Front/informasi');
+    $this->load->view('pages/Front/informasi', $data);
     $this->load->view('includes/Front/footer');
   }
 }

@@ -121,7 +121,7 @@
               <div class="row">
                 <div class="col">
                   <div class="form-group">
-                    <input type="hidden" name="id" value="<?= $data['id'] ?>">
+                    <input type="hidden" name="struktur" value="<?= $data['struktur'] ?>">
                     <label for="foto">Struktur Organisasi</label>
                     <input type="file" name="struktur" class="form-control" id="foto">
                   </div>
