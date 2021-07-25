@@ -31,8 +31,10 @@ class FrontController extends CI_Controller
     $data['title'] = "PGS | Profile";
     $data['getStrukturOrganisasi'] = $this->FrontModel->getStrukturOrganisasi()->row_array();
     $data['getNewFooterInformasi'] = $this->AssetSekolahModel->getNewFooterInformasi()->result_array();
+    $data['getWhereVisi'] = $this->AssetSekolahModel->getWhereVisi()->result_array();
+    $data['getWhereMisi'] = $this->AssetSekolahModel->getWhereMisi()->result_array();
     $this->load->view('includes/Front/header', $data);
-    $this->load->view('pages/Front/profile');
+    $this->load->view('pages/Front/profile', $data);
     $this->load->view('includes/Front/footer', $data);
   }
 

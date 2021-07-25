@@ -57,6 +57,56 @@ class AssetSekolahModel extends CI_Model
     }
   }
 
+  // UNTUK VISI DAN MISI
+  // Get Data Visi & Misi
+  function getVisiMisi()
+  {
+    $this->db->where(['']);
+    return $this->db->get('db_visimisi');
+  }
+
+  // Get Visi
+  function getWhereVisi()
+  {
+    $this->db->where(['jenis' => 'VISI']);
+    return $this->db->get('db_visimisi');
+  }
+
+  // Get Misi
+  function getWhereMisi()
+  {
+    $this->db->where(['jenis' => 'MISI']);
+    return $this->db->get('db_visimisi');
+  }
+
+  // Store Data Visi & Misi
+  function storeVisiMisi()
+  {
+    $data = [
+      'isi' => $this->input->post('isi'),
+      'jenis' => $this->input->post('jenis')
+    ];
+    $this->db->set($data);
+    $this->db->insert('db_visimisi');
+  }
+
+  // Update Data Visi Misi
+  function updateVisiMisi($id)
+  {
+    $data = ['isi' => $this->input->post('updateisi')];
+    $this->db->set($data);
+    $this->db->where(['id' => $id]);
+    $this->db->update('db_visimisi');
+  }
+
+  // Destroy Data Vsis Misi
+  function destroyVisiMisi($id)
+  {
+    $this->db->where(['id' => $id]);
+    $this->db->delete('db_visimisi');
+  }
+
+
   // UNTUK DATA INFORMASI
   // Get Data Informasi
   public function getInformasi()

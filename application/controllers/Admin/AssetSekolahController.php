@@ -55,11 +55,50 @@ class AssetSekolahController extends CI_Controller
     $data['title'] = "Visi Misi";
     $data['no'] = 1;
     $data['userLogin'] = $this->AuthModel->getUserLogin()->row_array();
-    $data['getAdmin'] = $this->AuthModel->getAdmin()->result_array();
+    $data['getVisiMisi'] = $this->AssetSekolahModel->getVisiMisi()->result_array();
     $this->load->view('includes/Admin/header', $data);
     $this->load->view('includes/Admin/sidebar', $data);
     $this->load->view('pages/dashboard/assetSekolah/visiMisi', $data);
     $this->load->view('includes/Admin/footer');
+  }
+
+  // Store Visi Dan Misi
+  public function storeVisiMisi()
+  {
+    $this->AssetSekolahModel->storeVisiMisi();
+    $this->session->set_flashdata('status', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Data Visi Misi</strong> Berhasil Di Tambah..
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>');
+    redirect('Admin/AssetSekolahController/visiMisi');
+  }
+
+  // Update Data Visi Misi
+  public function updateVisiMisi($id)
+  {
+    $this->AssetSekolahModel->updateVisiMisi($id);
+    $this->session->set_flashdata('status', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Data Visi Misi</strong> Berhasil Di Ubah..
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>');
+    redirect('Admin/AssetSekolahController/visiMisi');
+  }
+
+  // Destroy Data Visi Misi
+  public function destroyVisiMisi($id)
+  {
+    $this->AssetSekolahModel->destroyVisiMisi($id);
+    $this->session->set_flashdata('status', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>Data Visi Misi</strong> Berhasil Di Hapus..
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>');
+    redirect('Admin/AssetSekolahController/visiMisi');
   }
 
   // UNTUK DATA INFORMASI

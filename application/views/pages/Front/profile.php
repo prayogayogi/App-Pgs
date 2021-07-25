@@ -55,24 +55,29 @@
     <div class="row">
       <div class="col col-6">
         <div class="item">
-          <div class="testimony-wrap text-center">
-            <h3>Visi</h3>
-            <div class="text">
-              <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-              <p class="name">Dennis Green</p>
-              <span class="position">CSE Student</span>
+          <div class="testimony-wrap">
+            <h3 class="text-center">Visi</h3>
+            <div class="text mt-4" style="height: 350px;">
+              <ol>
+                <?php foreach ($getWhereVisi as $data) : ?>
+                  <li class="text-justify"><?= $data['isi']; ?></li>
+                <?php endforeach; ?>
+              </ol>
             </div>
           </div>
         </div>
       </div>
       <div class="col col-6">
         <div class="item">
-          <div class="testimony-wrap text-center">
-            <h3>Misi</h3>
-            <div class="text">
-              <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-              <p class="name">Dennis Green</p>
-              <span class="position">CSE Student</span>
+          <div class="testimony-wrap">
+            <h3 class="text-center">Misi</h3>
+            <div class="text mt-4" style="height: 350px;">
+              <ol>
+                <?php foreach ($getWhereMisi as $data) : ?>
+                  <li class="text-justify"><?= $data['isi']; ?></li>
+                <?php endforeach; ?>
+              </ol>
+
             </div>
           </div>
         </div>
