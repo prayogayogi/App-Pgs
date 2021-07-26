@@ -21,7 +21,7 @@
       <div class="col-lg-12 mb-sm-4 ftco-animate">
         <div class="card">
           <div class="card-body">
-            <table id="example2" class="table text-center table-bordered table-hover">
+            <table id="example2" class="table table-bordered table-hover">
               <thead>
                 <tr>
                   <th>No</th>

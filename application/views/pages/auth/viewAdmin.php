@@ -110,13 +110,17 @@
                   <select class="form-control" name="roles">
                     <option value="1">-- Pilih Posisi Jabatan --</option>
                     <option value="1">Admin</option>
-                    <option value="2">Camat</option>
-                    <option value="3">Petugas Desa</option>
+                    <option value="2">Guru</option>
+                    <option value="3">Pimpinan</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label for="foto">Photo</label>
                   <input type="file" name="foto" class="form-control" id="foto" placeholder="Masukan Tempat Tgl Lahir">
+                </div>
+                <div class="form-group">
+                  <label for="deskripsi">Deskripsi</label>
+                  <textarea name="deskripsi" id="deskripsi" class="form-control" rows="3" placeholder="Masukan Deskripsi"></textarea>
                 </div>
               </div>
             </div>
@@ -130,13 +134,13 @@
   </div>
 </div>
 
-<!-- Modal Untuk ubah data penduduk -->
+<!-- Modal Untuk ubah data Admin -->
 <?php foreach ($getAdmin as $data) : ?>
   <div class="modal fade" id="modalUbahDataPenduduk<?= $data['id'] ?>" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Ubah Data Penduduk</h5>
+          <h5 class="modal-title" id="staticBackdropLabel">Ubah Data Administrator</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -144,12 +148,12 @@
         <div class="modal-body">
           <div class="row">
             <div class="col">
-              <form action="<?= base_url('DataPendudukController/ubahDataPenduduk/') . $data['id'] ?>" method="POST">
+              <form action="<?= base_url('AdministratorController/ubahDataAdmin/') . $data['id'] ?>" method="POST">
                 <div class="row">
                   <div class="col">
                     <div class="form-group">
                       <label for="nama">Nama</label>
-                      <input type="text" name="nama" class="form-control" id="nama" disabled value="<?= $data['nama'] ?>" autofocus>
+                      <input type="text" name="nama" class="form-control" id="nama" value="<?= $data['nama'] ?>" disabled>
                     </div>
                     <div class="form-group">
                       <label for="email">Email</label>
@@ -158,6 +162,10 @@
                     <div class="form-group">
                       <label for="alamat">Alamat</label>
                       <input type="text" name="alamat" autocomplete="off" class="form-control" id="alamat" value="<?= $data['alamat'] ?>">
+                    </div>
+                    <div class="form-group">
+                      <label for="deskripsi">Deskripsi</label>
+                      <textarea name="deskripsi" id="deskripsi" class="form-control" rows="3" value="<?= $data['deskripsi'] ?>"><?= $data['deskripsi'] ?></textarea>
                     </div>
                   </div>
                 </div>
@@ -173,7 +181,7 @@
 <?php endforeach; ?>
 
 
-<!-- Modal Unutk Detail data Penduduk -->
+<!-- Modal Untuk Detail data Admin -->
 <?php foreach ($getAdmin as $data) : ?>
   <div class="modal fade" id="staticBackdrop<?= $data['id'] ?>" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -203,11 +211,14 @@
                 <?php if ($data['roles'] == 1) {
                   print "Admin";
                 } else if ($data['roles'] == 2) {
-                  print "Camat";
+                  print "Guru";
                 } else if ($data['roles'] == 3) {
-                  print "Petugas";
+                  print "Pimpinan";
                 } ?>
               </dd>
+              <dt class="col-sm-6">Deskripsi</dt>
+              <dd class="col-sm-6">:</dd>
+              <textarea name="isi" id="" class="form-control" disabled rows="5"> <?= $data['deskripsi']; ?></textarea>
             </dl>
           </div>
         </div>

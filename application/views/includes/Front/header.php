@@ -43,11 +43,17 @@
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item <?= (current_url() == base_url('FrontController')) || (current_url() == base_url('/')) ? 'active' : '' ?>"><a href="<?= base_url('FrontController') ?>" class="nav-link">Beranda</a></li>
+
           <li class="nav-item <?= (current_url() == base_url('FrontController/profile')) ? 'active' : '' ?>"><a href="<?= base_url('FrontController/profile') ?>" class="nav-link">Profile</a></li>
-          <li class="nav-item <?= (current_url() == base_url('FrontController/guru')) ? 'active' : '' ?>"><a href="<?= base_url('FrontController/guru') ?>" class="nav-link">Guru</a></li>
+
+          <li class="nav-item <?= (current_url() == base_url('FrontController/guru')) || (current_url() == base_url('FrontController/guru/') . $start) ? 'active' : '' ?>"><a href="<?= base_url('FrontController/guru') ?>" class="nav-link">Guru</a></li>
+
           <li class="nav-item <?= (current_url() == base_url('FrontController/siswa')) ? 'active' : '' ?>"><a href="<?= base_url('FrontController/siswa') ?>" class="nav-link">Siswa</a></li>
+
           <!-- <li class="nav-item <?= (current_url() == base_url('FrontController/ekskul')) ? 'active' : '' ?>"><a href="<?= base_url('FrontController/ekskul') ?>" class="nav-link">Ekskul</a></li> -->
+
           <li class="nav-item <?= (current_url() == base_url('FrontController/informasi')) ? 'active' : '' ?>"><a href="<?= base_url('FrontController/informasi') ?>" class="nav-link">Informasi</a></li>
+
           <li class="nav-item cta"><a href="<?= base_url('AuthController') ?>" class="nav-link"><span class="mx-3">Log In</span></a></li>
         </ul>
       </div>

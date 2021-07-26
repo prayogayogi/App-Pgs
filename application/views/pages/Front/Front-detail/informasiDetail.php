@@ -26,7 +26,7 @@
           <div class="desc align-self-md-center">
             <small>Post By</small>
             <h3><?= $getDetailInformasi['ouner_post']; ?></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
+            <p><?= $fotoOunerPost['deskripsi']; ?></p>
           </div>
         </div>
       </div> <!-- .col-md-8 -->

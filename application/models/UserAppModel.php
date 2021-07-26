@@ -23,9 +23,23 @@ class UserAppModel extends CI_Model
       'email' => $this->input->post('email'),
       'alamat' => $this->input->post('alamat'),
       'foto' => $files,
+      'deskripsi' => $this->input->post('deskripsi'),
       'roles' => $this->input->post('roles'),
       'password' => password_hash(('admin'), PASSWORD_DEFAULT)
     ];
     $this->db->insert('userapp', $data);
+  }
+
+  // Update Data Administrator
+  function updateDataAdmin($id)
+  {
+    $data = [
+      'email' => $this->input->post('email'),
+      'alamat' => $this->input->post('alamat'),
+      'deskripsi' => $this->input->post('deskripsi'),
+    ];
+    $this->db->set($data);
+    $this->db->where(['id' => $id]);
+    $this->db->update('userapp');
   }
 }

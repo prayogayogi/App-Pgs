@@ -9,6 +9,19 @@ class DataUserSekolahModel extends CI_Model
     return $this->db->get('db_guru');
   }
 
+  // Get Data Pagination
+  function getPagination($start, $mulai)
+  {
+    return $this->db->get('db_guru', $start, $mulai, 'DESC');
+  }
+
+  // Get Detail Guru
+  function getDetailGuru($id)
+  {
+    $this->db->where(['id' => $id]);
+    return $this->db->get('db_guru');
+  }
+
   // Store Data Guru
   function storeGuru()
   {
@@ -93,5 +106,11 @@ class DataUserSekolahModel extends CI_Model
   {
     $this->db->where(['id' => $id]);
     $this->db->delete('db_siswa');
+  }
+
+  // Get Data Admin Num Rows
+  function getAdmin()
+  {
+    return $this->db->get('userapp');
   }
 }

@@ -60,7 +60,7 @@
             <div class="text mt-4" style="height: 350px;">
               <ol>
                 <?php foreach ($getWhereVisi as $data) : ?>
-                  <li class="text-justify"><?= $data['isi']; ?></li>
+                  <li class="text-justify mt-3"><?= $data['isi']; ?></li>
                 <?php endforeach; ?>
               </ol>
             </div>
@@ -74,16 +74,13 @@
             <div class="text mt-4" style="height: 350px;">
               <ol>
                 <?php foreach ($getWhereMisi as $data) : ?>
-                  <li class="text-justify"><?= $data['isi']; ?></li>
+                  <li class="text-justify mt-3"><?= $data['isi']; ?></li>
                 <?php endforeach; ?>
               </ol>
-
             </div>
           </div>
         </div>
       </div>
-
-
     </div>
   </div>
 </section>

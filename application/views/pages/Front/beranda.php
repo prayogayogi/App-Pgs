@@ -23,7 +23,7 @@
           <div class="d-flex mb-4">
             <div class="img" style="background-image: url(<?= base_url('assets/Tgenius/') ?>images/person_1.jpg);"></div>
             <div class="info ml-4">
-              <h3><a href="teacher-single.html"><?= $getKepsek['nama']; ?></a></h3>
+              <h3><a href="<?= base_url('FrontDetailController/getDetailGuru/') . $getKepsek['id'] ?>"><?= $getKepsek['nama']; ?></a></h3>
               <span class="position"><?= $getKepsek['jabatan']; ?></span>
               <p class="ftco-social d-flex">
                 <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a>
@@ -42,7 +42,7 @@
           <div class="d-flex mb-4">
             <div class="img" style="background-image: url(<?= base_url('assets/Tgenius/') ?>images/person_2.jpg);"></div>
             <div class="info ml-4">
-              <h3><a href="teacher-single.html"><?= $getWakilKepsek['nama']; ?></a></h3>
+              <h3><a href="<?= base_url('FrontDetailController/getDetailGuru/') . $getWakilKepsek['id'] ?>"><?= $getWakilKepsek['nama']; ?></a></h3>
               <span class="position"><?= $getWakilKepsek['jabatan']; ?></span>
               <p class="ftco-social d-flex">
                 <a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a>
@@ -65,9 +65,9 @@
   <div class="container">
     <div class="row d-md-flex justify-content-center">
       <div class="col-md-9 about-video text-center">
-        <h2 class="ftco-animate">SMA NEGRI 5 UJAN MAS ADALAH SEKOLAH TERAKREDITASI (A) DI KABUPATEN KEPAHIANG</h2>
+        <h2 class="ftco-animate">Sma Negri 5 Ujan Mas Adalah Sekolah Terakreditasi (A) Di Kabupaten Kepahiyang</h2>
         <div class="video d-flex justify-content-center">
-          <a href="https://youtu.be/nbTguNnjYwM" class="button popup-vimeo d-flex justify-content-center align-items-center"><span class="ion-ios-play"></span></a>
+          <a href="https://www.youtube.com/watch?v=dpG77oZ-X1k" class="button popup-vimeo d-flex justify-content-center align-items-center"><span class="ion-ios-play"></span></a>
         </div>
       </div>
     </div>

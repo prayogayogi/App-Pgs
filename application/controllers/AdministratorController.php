@@ -7,7 +7,7 @@ class AdministratorController extends CI_Controller
   public function __construct()
   {
     parent::__construct();
-    $this->load->model(['pendudukModel', 'authModel', 'UserAppModel']);
+    $this->load->model(['authModel', 'UserAppModel']);
   }
 
   // get data Administrator
@@ -29,6 +29,18 @@ class AdministratorController extends CI_Controller
     $this->UserAppModel->tambahDataAdmin();
     $this->session->set_flashdata('status', '<div class="alert alert-success alert-dismissible fade show" role="alert">
     <strong>Data Admin</strong> Berhasil Di Tambah.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>');
+    redirect('AdministratorController');
+  }
+
+  public function ubahDataAdmin($id)
+  {
+    $this->UserAppModel->updateDataAdmin($id);
+    $this->session->set_flashdata('status', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Data Admisistrator</strong> Berhasil Diubah.
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>
