@@ -8,23 +8,23 @@
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 
-  <link rel="stylesheet" href="<?= base_url('assets/Tgenius/') ?>css/open-iconic-bootstrap.min.css">
-  <link rel="stylesheet" href="<?= base_url('assets/Tgenius/') ?>css/animate.css">
+  <link rel="stylesheet" href="<?= base_url('assets/') ?>Tgenius/css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="<?= base_url('assets/') ?>Tgenius/css/animate.css">
 
-  <link rel="stylesheet" href="<?= base_url('assets/Tgenius/') ?>css/owl.carousel.min.css">
-  <link rel="stylesheet" href="<?= base_url('assets/Tgenius/') ?>css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="<?= base_url('assets/Tgenius/') ?>css/magnific-popup.css">
+  <link rel="stylesheet" href="<?= base_url('assets/') ?>Tgenius/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="<?= base_url('assets/') ?>Tgenius/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="<?= base_url('assets/') ?>Tgenius/css/magnific-popup.css">
 
-  <link rel="stylesheet" href="<?= base_url('assets/Tgenius/') ?>css/aos.css">
+  <link rel="stylesheet" href="<?= base_url('assets/') ?>Tgenius/css/aos.css">
 
-  <link rel="stylesheet" href="<?= base_url('assets/Tgenius/') ?>css/ionicons.min.css">
+  <link rel="stylesheet" href="<?= base_url('assets/') ?>Tgenius/css/ionicons.min.css">
 
-  <link rel="stylesheet" href="<?= base_url('assets/Tgenius/') ?>css/bootstrap-datepicker.css">
-  <link rel="stylesheet" href="<?= base_url('assets/Tgenius/') ?>css/jquery.timepicker.css">
+  <link rel="stylesheet" href="<?= base_url('assets/') ?>Tgenius/css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="<?= base_url('assets/') ?>Tgenius/css/jquery.timepicker.css">
 
-  <link rel="stylesheet" href="<?= base_url('assets/Tgenius/') ?>css/flaticon.css">
-  <link rel="stylesheet" href="<?= base_url('assets/Tgenius/') ?>css/icomoon.css">
-  <link rel="stylesheet" href="<?= base_url('assets/Tgenius/') ?>css/style.css">
+  <link rel="stylesheet" href="<?= base_url('assets/') ?>Tgenius/css/flaticon.css">
+  <link rel="stylesheet" href="<?= base_url('assets/') ?>Tgenius/css/icomoon.css">
+  <link rel="stylesheet" href="<?= base_url('assets/') ?>Tgenius/css/style.css">
   <!-- DataTables -->
   <link rel="stylesheet" href="<?= base_url('assets') ?>/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <!-- <link rel="stylesheet" href="<?= base_url('assets') ?>/plugins/datatables-responsive/css/responsive.bootstrap4.min.css"> -->

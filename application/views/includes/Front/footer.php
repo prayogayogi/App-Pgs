@@ -74,23 +74,23 @@
   </svg></div>
 
 
-<script src="<?= base_url('assets/Tgenius/') ?>js/jquery.min.js"></script>
-<script src="<?= base_url('assets/Tgenius/') ?>js/jquery-migrate-3.0.1.min.js"></script>
-<script src="<?= base_url('assets/Tgenius/') ?>js/popper.min.js"></script>
-<script src="<?= base_url('assets/Tgenius/') ?>js/bootstrap.min.js"></script>
-<script src="<?= base_url('assets/Tgenius/') ?>js/jquery.easing.1.3.js"></script>
-<script src="<?= base_url('assets/Tgenius/') ?>js/jquery.waypoints.min.js"></script>
-<script src="<?= base_url('assets/Tgenius/') ?>js/jquery.stellar.min.js"></script>
-<script src="<?= base_url('assets/Tgenius/') ?>js/owl.carousel.min.js"></script>
-<script src="<?= base_url('assets/Tgenius/') ?>js/jquery.magnific-popup.min.js"></script>
-<script src="<?= base_url('assets/Tgenius/') ?>js/aos.js"></script>
-<script src="<?= base_url('assets/Tgenius/') ?>js/jquery.animateNumber.min.js"></script>
-<script src="<?= base_url('assets/Tgenius/') ?>js/bootstrap-datepicker.js"></script>
-<script src="<?= base_url('assets/Tgenius/') ?>js/jquery.timepicker.min.js"></script>
-<script src="<?= base_url('assets/Tgenius/') ?>js/scrollax.min.js"></script>
+<script src="<?= base_url('assets/') ?>Tgenius/js/jquery.min.js"></script>
+<script src="<?= base_url('assets/') ?>Tgenius/js/jquery-migrate-3.0.1.min.js"></script>
+<script src="<?= base_url('assets/') ?>Tgenius/js/popper.min.js"></script>
+<script src="<?= base_url('assets/') ?>Tgenius/js/bootstrap.min.js"></script>
+<script src="<?= base_url('assets/') ?>Tgenius/js/jquery.easing.1.3.js"></script>
+<script src="<?= base_url('assets/') ?>Tgenius/js/jquery.waypoints.min.js"></script>
+<script src="<?= base_url('assets/') ?>Tgenius/js/jquery.stellar.min.js"></script>
+<script src="<?= base_url('assets/') ?>Tgenius/js/owl.carousel.min.js"></script>
+<script src="<?= base_url('assets/') ?>Tgenius/js/jquery.magnific-popup.min.js"></script>
+<script src="<?= base_url('assets/') ?>Tgenius/js/aos.js"></script>
+<script src="<?= base_url('assets/') ?>Tgenius/js/jquery.animateNumber.min.js"></script>
+<script src="<?= base_url('assets/') ?>Tgenius/js/bootstrap-datepicker.js"></script>
+<script src="<?= base_url('assets/') ?>Tgenius/js/jquery.timepicker.min.js"></script>
+<script src="<?= base_url('assets/') ?>Tgenius/js/scrollax.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-<script src="<?= base_url('assets/Tgenius/') ?>js/google-map.js"></script>
-<script src="<?= base_url('assets/Tgenius/') ?>js/main.js"></script>
+<script src="<?= base_url('assets/') ?>Tgenius/js/google-map.js"></script>
+<script src="<?= base_url('assets/') ?>Tgenius/js/main.js"></script>
 <!-- Data Table -->
 <script src="<?= base_url('assets') ?>/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="<?= base_url('assets') ?>/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
