@@ -5,7 +5,7 @@
   <title><?= $title; ?></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  <link rel="icon" type="image/png" sizes="96x96" href="<?= base_url('assets/assetGambar/favicon.png') ?>">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 
   <link rel="stylesheet" href="<?= base_url('assets/') ?>FrontAssets/css/open-iconic-bootstrap.min.css">
