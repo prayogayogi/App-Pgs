@@ -1,4 +1,4 @@
-<div class="hero-wrap" style="background-image: url('<?= base_url('assets/Tgenius/') ?>images/bg_1.jpg'); background-attachment:fixed;">
+<div class="hero-wrap" style="background-image: url('<?= base_url('assets/FrontAssets/') ?>images/bg_1.jpg'); background-attachment:fixed;">
   <div class="overlay"></div>
   <div class="container">
     <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
@@ -21,7 +21,7 @@
       <div class="col-lg-6 mb-sm-4 ftco-animate">
         <div class="staff">
           <div class="d-flex mb-4">
-            <div class="img" style="background-image: url(<?= base_url('assets/Tgenius/') ?>images/person_1.jpg);"></div>
+            <div class="img" style="background-image: url(<?= base_url('assets/assetGambar/guru/') . $getKepsek['foto'] ?>);"></div>
             <div class="info ml-4">
               <h3><a href="<?= base_url('FrontDetailController/getDetailGuru/') . $getKepsek['id'] ?>"><?= $getKepsek['nama']; ?></a></h3>
               <span class="position"><?= $getKepsek['jabatan']; ?></span>
@@ -40,7 +40,7 @@
       <div class="col-lg-6 mb-sm-4 ftco-animate">
         <div class="staff">
           <div class="d-flex mb-4">
-            <div class="img" style="background-image: url(<?= base_url('assets/Tgenius/') ?>images/person_2.jpg);"></div>
+            <div class="img" style="background-image: url(<?= base_url('assets/assetGambar/guru/') . $getWakilKepsek['foto'] ?>);"></div>
             <div class="info ml-4">
               <h3><a href="<?= base_url('FrontDetailController/getDetailGuru/') . $getWakilKepsek['id'] ?>"><?= $getWakilKepsek['nama']; ?></a></h3>
               <span class="position"><?= $getWakilKepsek['jabatan']; ?></span>
@@ -60,7 +60,7 @@
   </div>
 </section>
 
-<section class="ftco-section-3 img" style="background-image: url(<?= base_url('assets/Tgenius/') ?>images/bg_3.jpg);">
+<section class="ftco-section-3 img" style="background-image: url(<?= base_url('assets/FrontAssets/') ?>images/bg_3.jpg);">
   <div class="overlay"></div>
   <div class="container">
     <div class="row d-md-flex justify-content-center">
@@ -171,7 +171,7 @@
     <div class="row">
       <div class="col-md-4 d-flex ftco-animate">
         <div class="blog-entry align-self-stretch">
-          <a href="blog-single.html" class="block-20" style="background-image: url('<?= base_url('assets/Tgenius/') ?>images/event-1.jpg');">
+          <a href="blog-single.html" class="block-20" style="background-image: url('<?= base_url('assets/FrontAssets/') ?>images/event-1.jpg');">
           </a>
           <div class="text p-4 d-block">
             <div class="meta mb-3">
@@ -188,7 +188,7 @@
       </div>
       <div class="col-md-4 d-flex ftco-animate">
         <div class="blog-entry d-flex align-self-stretch flex-column-reverse">
-          <a href="blog-single.html" class="block-20" style="background-image: url('<?= base_url('assets/Tgenius/') ?>images/event-2.jpg');">
+          <a href="blog-single.html" class="block-20" style="background-image: url('<?= base_url('assets/FrontAssets/') ?>images/event-2.jpg');">
           </a>
           <div class="text p-4 d-block">
             <div class="meta mb-3">
@@ -205,7 +205,7 @@
       </div>
       <div class="col-md-4 d-flex ftco-animate">
         <div class="blog-entry align-self-stretch">
-          <a href="blog-single.html" class="block-20" style="background-image: url('<?= base_url('assets/Tgenius/') ?>images/event-3.jpg');">
+          <a href="blog-single.html" class="block-20" style="background-image: url('<?= base_url('assets/FrontAssets/') ?>images/event-3.jpg');">
           </a>
           <div class="text p-4 d-block">
             <div class="meta mb-3">

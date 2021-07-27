@@ -1,4 +1,4 @@
- <div class="hero-wrap hero-wrap-2" style="background-image: url('<?= base_url('assets/Tgenius/') ?>images/bg_2.jpg'); background-attachment:fixed;">
+ <div class="hero-wrap hero-wrap-2" style="background-image: url('<?= base_url('assets/FrontAssets/') ?>images/bg_2.jpg'); background-attachment:fixed;">
    <div class="overlay"></div>
    <div class="container">
      <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
@@ -15,7 +15,7 @@
      <div class="row">
        <div class="col-md-4 d-flex ftco-animate">
          <div class="blog-entry align-self-stretch">
-           <a href="blog-single.html" class="block-20" style="background-image: url('<?= base_url('assets/Tgenius/') ?>images/event-1.jpg');">
+           <a href="blog-single.html" class="block-20" style="background-image: url('<?= base_url('assets/FrontAssets/') ?>images/event-1.jpg');">
            </a>
            <div class="text p-4 d-block">
              <div class="meta mb-3">
@@ -32,7 +32,7 @@
        </div>
        <div class="col-md-4 d-flex ftco-animate">
          <div class="blog-entry d-md-flex align-self-stretch flex-column-reverse">
-           <a href="blog-single.html" class="block-20 align-self-end" style="background-image: url('<?= base_url('assets/Tgenius/') ?>images/event-2.jpg');">
+           <a href="blog-single.html" class="block-20 align-self-end" style="background-image: url('<?= base_url('assets/FrontAssets/') ?>images/event-2.jpg');">
            </a>
            <div class="text p-4 d-block">
              <div class="meta mb-3">
@@ -49,7 +49,7 @@
        </div>
        <div class="col-md-4 d-flex ftco-animate">
          <div class="blog-entry align-self-stretch">
-           <a href="blog-single.html" class="block-20" style="background-image: url('<?= base_url('assets/Tgenius/') ?>images/event-3.jpg');">
+           <a href="blog-single.html" class="block-20" style="background-image: url('<?= base_url('assets/FrontAssets/') ?>images/event-3.jpg');">
            </a>
            <div class="text p-4 d-block">
              <div class="meta mb-3">
