@@ -107,7 +107,7 @@ class AssetSekolahModel extends CI_Model
 
 
 	// UNTUK DATA INFORMASI
-	// Get Data Informasi
+	// Get Data Informasi Di Admin
 	function getDataInformasi()
 	{
 		$this->db->order_by('id', 'DESC');
@@ -130,10 +130,10 @@ class AssetSekolahModel extends CI_Model
 		return $this->db->get('db_informasi');
 	}
 
-	// Get Data Informasi Detail
-	public function getDetailInformasi($id)
+	// Get Data Informasi Berdasarkan Detail Informasi 
+	public function getDetailInformasi($slug)
 	{
-		$this->db->where(['id' => $id]);
+		$this->db->where(['slug_judul' => $slug]);
 		return $this->db->get('db_informasi');
 	}
 
@@ -162,11 +162,16 @@ class AssetSekolahModel extends CI_Model
 			}
 		}
 		$ouner = $this->db->get_where('userapp', ['email' => $this->session->userdata('email')])->row_array();
+		$judul =  ucwords($this->input->post('judul'));
+		$slug_judul = trim(strtolower($judul));
+		$out = explode(" ", $slug_judul);
+		$slug = implode("-", $out);
 		$data = [
-			'judul' => ucwords($this->input->post('judul')),
+			'judul' => $judul,
 			'isi' => $this->input->post('isi'),
 			'foto' => $files,
 			'ouner_post' => $ouner['nama'],
+			'slug_judul' => $slug,
 			'created_at' => time()
 		];
 		$this->db->insert('db_informasi', $data);
@@ -201,11 +206,11 @@ class AssetSekolahModel extends CI_Model
 	}
 
 	// Destroy Data Informasi
-	public function destroyInformasi($id)
+	public function destroyInformasi($slug)
 	{
-		$foto = $this->db->get_where('db_informasi', ['id' => $id])->row_array();
+		$foto = $this->db->get_where('db_informasi', ['slug_judul' => $slug])->row_array();
 		unlink(FCPATH . './assets/assetGambar/informasi/' . $foto['foto']);
-		$this->db->where(['id' => $id]);
+		$this->db->where(['slug_judul' => $slug]);
 		$this->db->delete('db_informasi');
 	}
 }

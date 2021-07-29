@@ -120,7 +120,6 @@ class DataUserSekolahModel extends CI_Model
 			'nis' => $this->input->post('nis'),
 			'nisn' => $this->input->post('nisn'),
 			'nama' => ucwords(trim($this->input->post('nama'))),
-			'jenis_kelamin' => $this->input->post('jenisKelamin'),
 			'tempat_lahir' => ucwords(trim($this->input->post('tempatLahir'))),
 			'tanggal_lahir' => $this->input->post('tanggalLahir'),
 			'nama_ayah' => ucwords(trim($this->input->post('namaAyah'))),

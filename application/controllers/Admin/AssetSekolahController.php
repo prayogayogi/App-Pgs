@@ -142,9 +142,9 @@ class AssetSekolahController extends CI_Controller
 	}
 
 	// Destroy Data Informasi
-	public function destroyInformasi($id)
+	public function destroyInformasi($slug)
 	{
-		$this->AssetSekolahModel->destroyInformasi($id);
+		$this->AssetSekolahModel->destroyInformasi($slug);
 		$this->session->set_flashdata('status', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
     <strong>Data Informasi</strong> Berhasil Di Hapus..
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
