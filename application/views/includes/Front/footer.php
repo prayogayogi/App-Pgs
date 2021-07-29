@@ -20,7 +20,7 @@
 						<div class="block-21 mb-4 d-flex">
 							<a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
 							<div class="text">
-								<h3 class="heading"><a href="<?= base_url('FrontDetailController/getDetaiInformasi/') . $data['id'] ?>"><?= $data['judul']; ?></a></h3>
+								<h3 class="heading"><a href="<?= base_url('FrontDetailController/getDetaiInformasi/') . $data['slug_judul'] ?>"><?= $data['judul']; ?></a></h3>
 								<div class="meta">
 									<div><a href="#"><span class="icon-calendar"></span> <?= date("d/ M/ Y", $data['created_at'],); ?></a></div>
 									<div><a href="#"><span class="icon-person"></span> <?= $data['ouner_post']; ?></a></div>
