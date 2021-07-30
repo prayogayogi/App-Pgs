@@ -143,7 +143,7 @@
 			<?php foreach ($getNewInformasi as $data) : ?>
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry align-self-stretch">
-						<a href="<?= base_url('FrontDetailController/getDetaiInformasi/') . $data['id'] ?>" class="block-20" style="background-image: url('<?= base_url('/assets/assetGambar/informasi/') . $data['foto'] ?>');">
+						<a href="<?= base_url('FrontDetailController/getDetaiInformasi/') . $data['slug_judul'] ?>" class="block-20" style="background-image: url('<?= base_url('/assets/assetGambar/informasi/') . $data['foto'] ?>');">
 						</a>
 						<div class="text p-4 d-block">
 							<div class="meta mb-3">
@@ -151,7 +151,7 @@
 								<div><a href="#"><?= $data['ouner_post']; ?></a></div>
 								<div><a href="#" class="meta-chat"><span class="icon-chat"></span> Berita Terbaru</a></div>
 							</div>
-							<h3 class="heading mt-3"><a href="<?= base_url('FrontDetailController/getDetaiInformasi/') . $data['id'] ?>"><?= $data['judul']; ?></a></h3>
+							<h3 class="heading mt-3"><a href="<?= base_url('FrontDetailController/getDetaiInformasi/') . $data['slug_judul'] ?>"><?= $data['judul']; ?></a></h3>
 							<p><?= $data['isi']; ?></p>
 						</div>
 					</div>

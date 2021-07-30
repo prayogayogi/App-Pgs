@@ -18,6 +18,7 @@ class FrontDetailController extends CI_Controller
 		$data['getInformasi'] = $this->AssetSekolahModel->getNewInformasi()->result_array();
 		$data['getNewFooterInformasi'] = $this->AssetSekolahModel->getNewFooterInformasi()->result_array();
 		$data['fotoOunerPost'] = $this->FrontModel->fotoOunerPost($slug)->row_array();
+		$data['getSosialMedia'] = $this->FrontModel->getSosialMedia();
 		$this->load->view('includes/Front/header', $data);
 		$this->load->view('pages/Front/Front-detail/informasiDetail', $data);
 		$this->load->view('includes/Front/footer', $data);
@@ -30,6 +31,7 @@ class FrontDetailController extends CI_Controller
 		$data['start'] = $this->uri->segment(3);
 		$data['getNewFooterInformasi'] = $this->AssetSekolahModel->getNewFooterInformasi()->result_array();
 		$data['getDetailGuru'] = $this->DataUserSekolahModel->getDetailGuru($slug)->row_array();
+		$data['getSosialMedia'] = $this->FrontModel->getSosialMedia();
 		$this->load->view('includes/Front/header', $data);
 		$this->load->view('pages/Front/Front-detail/guruDetail', $data);
 		$this->load->view('includes/Front/footer', $data);
