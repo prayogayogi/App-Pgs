@@ -16,9 +16,9 @@ class DataUserSekolahModel extends CI_Model
 	}
 
 	// Get Detail Guru
-	function getDetailGuru($id)
+	function getDetailGuru($slug)
 	{
-		$this->db->where(['id' => $id]);
+		$this->db->where(['created_at' => $slug]);
 		return $this->db->get('db_guru');
 	}
 
@@ -43,7 +43,8 @@ class DataUserSekolahModel extends CI_Model
 			'jabatan' => $this->input->post('jabatan'),
 			'mengajar' => $this->input->post('mengajar'),
 			'foto' => $files,
-			'deskripsi' => $this->input->post('deskripsi')
+			'deskripsi' => $this->input->post('deskripsi'),
+			'created_at' => time()
 		];
 		$this->db->insert('db_guru', $data);
 	}

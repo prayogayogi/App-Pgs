@@ -37,7 +37,7 @@
                         <thead>
                           <tr>
                             <th>No</th>
-                            <th>Isi</th>
+                            <th class="text-center">Isi</th>
                             <th>Jenis</th>
                             <th>Action</th>
                           </tr>
@@ -46,7 +46,7 @@
                           <?php foreach ($getVisiMisi as $data) : ?>
                             <tr>
                               <td><?= $no++ ?></td>
-                              <td><?= $data['isi']; ?></td>
+                              <td class="text-justify"><?= $data['isi']; ?></td>
                               <td class="text-center"><?= $data['jenis']; ?></td>
                               <td class="text-center">
                                 <a href="#" data-toggle="modal" data-target="#modalUbahDataPenduduk<?= $data['id'] ?>" class="btn btn-primary"><i class="fas fa-pen-square"></i></a>

@@ -38,4 +38,10 @@ class FrontModel extends CI_Model
 	{
 		return $this->db->get('struktur_organisasi');
 	}
+
+	// Get Sosial Media
+	function getSosialMedia()
+	{
+		return $this->db->get('db_sosial_media')->row_array();
+	}
 }

@@ -15,7 +15,7 @@
 		<div class="row">
 			<div class="col-md-8 ftco-animate">
 				<h2 class="mb-3"><?= $getDetailInformasi['judul']; ?></h2>
-				<p><?= $getDetailInformasi['isi']; ?></p>
+				<p class="text-justify"><?= $getDetailInformasi['isi']; ?></p>
 				<p>
 					<img src="<?= base_url('assets/assetGambar/informasi/') . $getDetailInformasi['foto'] ?>" alt="" class="img-fluid">
 				</p>
@@ -26,7 +26,7 @@
 					<div class="desc align-self-md-center">
 						<small>Post By</small>
 						<h3><?= $getDetailInformasi['ouner_post']; ?></h3>
-						<p><?= $fotoOunerPost['deskripsi']; ?></p>
+						<p class="text-justify"><?= $fotoOunerPost['deskripsi']; ?></p>
 					</div>
 				</div>
 			</div> <!-- .col-md-8 -->
@@ -36,7 +36,7 @@
 				</div>
 
 				<div class="sidebar-box ftco-animate">
-					<h3>Informasi Terbaru Lain nya</h3>
+					<h3>Informasi Terbaru</h3>
 					<?php foreach ($getInformasi as $data) : ?>
 						<div class="block-21 mb-4 d-flex">
 							<a class="blog-img mr-4" style="background-image: url(<?= base_url('assets/assetGambar/informasi/') . $data['foto'] ?>);"></a>

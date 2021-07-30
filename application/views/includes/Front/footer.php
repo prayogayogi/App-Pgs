@@ -4,12 +4,12 @@
 		<div class="row mb-5">
 			<div class="col-md-3">
 				<div class="ftco-footer-widget mb-4">
-					<h2><a class="navbar-brand" href="index.html"><i class="flaticon-university"></i>Smk N 05 <br><small>Kepahiang</small></a></h2>
+					<h2><a class="navbar-brand" href="<?= base_url('FrontController') ?>">SMK 05 Ujan Mas <br><small>Kepahiang</small></a></h2>
 					<p>Smk N 05 Ujan Mas Kabupaten Kepahiang Merupakan Smk Yang Sanggat Mementingkan Kualitas dan Menghasilkan Lulusan Terbaik.</p>
 					<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-						<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-						<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-						<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+						<li class="ftco-animate"><a href="<?= $getSosialMedia['twitter'] ?>" target="blank"><span class="icon-twitter"></span></a></li>
+						<li class="ftco-animate"><a href="<?= $getSosialMedia['facebook'] ?>" target="blank"><span class="icon-facebook"></span></a></li>
+						<li class="ftco-animate"><a href="<?= $getSosialMedia['instagram'] ?>" target="blank"><span class="icon-instagram"></span></a></li>
 					</ul>
 				</div>
 			</div>
@@ -35,10 +35,10 @@
 				<div class="ftco-footer-widget mb-4 ml-md-4">
 					<h2 class="ftco-heading-2">Tautan Situs</h2>
 					<ul class="list-unstyled">
-						<li><a href="#" class="py-2 d-block">Facebook</a></li>
-						<li><a href="#" class="py-2 d-block">Instagram</a></li>
-						<li><a href="#" class="py-2 d-block">Twitter</a></li>
-						<li><a href="#" class="py-2 d-block">Tik-Tok</a></li>
+						<li><a href="<?= $getSosialMedia['facebook'] ?>" target="blank" class="py-2 d-block">Facebook</a></li>
+						<li><a href="<?= $getSosialMedia['instagram'] ?>" target="blank" class="py-2 d-block">Instagram</a></li>
+						<li><a href="<?= $getSosialMedia['twitter'] ?>" target="blank" class="py-2 d-block">Twitter</a></li>
+						<li><a href="<?= $getSosialMedia['tik-tok'] ?>" target="blank" class="py-2 d-block">Tik-Tok</a></li>
 					</ul>
 				</div>
 			</div>
@@ -60,7 +60,7 @@
 				<p>
 					Copyright &copy;<script>
 						document.write(new Date().getFullYear());
-					</script> All rights reserved | Modif template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="#" target="_blank">KodingDev</a>
+					</script> All rights reserved | <i class="icon-heart" aria-hidden="true"></i> by <a href="#" target="_blank">KodingDev</a>
 				</p>
 			</div>
 		</div>

@@ -213,4 +213,40 @@ class AssetSekolahModel extends CI_Model
 		$this->db->where(['slug_judul' => $slug]);
 		$this->db->delete('db_informasi');
 	}
+
+	// SOSIAL MEDIA
+	// Get Sosial Media
+	function getSosialMedia()
+	{
+		return $this->db->get('db_sosial_media');
+	}
+
+	// Sore Sosial Media
+	function storeSosialMedia()
+	{
+		$data = [
+			'email' => $this->input->post('email'),
+			'facebook' => $this->input->post('facebook'),
+			'instagram' => $this->input->post('instagram'),
+			'twitter' => $this->input->post('twitter'),
+			'tik-tok' => $this->input->post('tik-tok'),
+		];
+		$this->db->set($data);
+		$this->db->insert('db_sosial_media');
+	}
+
+	// Updata Sosial Meida
+	function updateSosialMedia($id)
+	{
+		$data = [
+			'email' => $this->input->post('email'),
+			'facebook' => $this->input->post('facebook'),
+			'instagram' => $this->input->post('instagram'),
+			'twitter' => $this->input->post('twitter'),
+			'tik-tok' => $this->input->post('tik-tok'),
+		];
+		$this->db->where(['id' => $id]);
+		$this->db->set($data);
+		$this->db->update('db_sosial_media');
+	}
 }

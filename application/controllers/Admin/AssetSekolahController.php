@@ -153,4 +153,44 @@ class AssetSekolahController extends CI_Controller
   </div>');
 		redirect('Admin/AssetSekolahController/dataInformasi');
 	}
+
+	// SOSIAL MEIDA
+	// Get Sosial Media
+	public function sosialMedia()
+	{
+		$data['title'] = "Sosial Media";
+		$data['no'] = 1;
+		$data['userLogin'] = $this->AuthModel->getUserLogin()->row_array();
+		$data['getSosialMedia'] = $this->AssetSekolahModel->getSosialMedia()->result_array();
+		$this->load->view('includes/Admin/header', $data);
+		$this->load->view('includes/Admin/sidebar', $data);
+		$this->load->view('pages/dashboard/assetSekolah/sosialMedia', $data);
+		$this->load->view('includes/Admin/footer');
+	}
+
+	// Sotore Sosial Media
+	public function storeSosialMedia()
+	{
+		$this->AssetSekolahModel->storeSosialMedia();
+		$this->session->set_flashdata('status', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Data Sosial Media</strong> Berhasil Di Tambah..
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>');
+		redirect('Admin/AssetSekolahController/sosialMedia');
+	}
+
+	// Updata Sosial Media
+	public function updateSosialMedia($id)
+	{
+		$this->AssetSekolahModel->updateSosialMedia($id);
+		$this->session->set_flashdata('status', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Data Sosial Media</strong> Berhasil Di Ubah..
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>');
+		redirect('Admin/AssetSekolahController/sosialMedia');
+	}
 }

@@ -23,7 +23,7 @@
 					<div class="d-flex mb-4">
 						<div class="img" style="background-image: url(<?= base_url('assets/assetGambar/guru/') . $getKepsek['foto'] ?>);"></div>
 						<div class="info ml-4">
-							<h3><a href="<?= base_url('FrontDetailController/getDetailGuru/') . $getKepsek['id'] ?>"><?= $getKepsek['nama']; ?></a></h3>
+							<h3><a href="<?= base_url('FrontDetailController/getDetailGuru/') . $getKepsek['created_at'] ?>"><?= $getKepsek['nama']; ?></a></h3>
 							<span class="position"><?= $getKepsek['jabatan']; ?></span>
 							<p class="ftco-social d-flex">
 								<a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a>
@@ -42,7 +42,7 @@
 					<div class="d-flex mb-4">
 						<div class="img" style="background-image: url(<?= base_url('assets/assetGambar/guru/') . $getWakilKepsek['foto'] ?>);"></div>
 						<div class="info ml-4">
-							<h3><a href="<?= base_url('FrontDetailController/getDetailGuru/') . $getWakilKepsek['id'] ?>"><?= $getWakilKepsek['nama']; ?></a></h3>
+							<h3><a href="<?= base_url('FrontDetailController/getDetailGuru/') . $getWakilKepsek['created_at'] ?>"><?= $getWakilKepsek['nama']; ?></a></h3>
 							<span class="position"><?= $getWakilKepsek['jabatan']; ?></span>
 							<p class="ftco-social d-flex">
 								<a href="#" class="d-flex justify-content-center align-items-center"><span class="icon-twitter"></span></a>
