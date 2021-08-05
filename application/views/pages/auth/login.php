@@ -3,13 +3,13 @@
 		<div id="layoutAuthentication_content">
 			<main>
 				<div class="container">
-					<div class="row justify-content-center mt-3">
-						<div class="col-lg-5 mt-4">
+					<div class="row justify-content-center mt-4">
+						<div class="col-lg-5 mt-5">
 							<div class="card shadow-lg border-0 rounded-lg mt-5">
 								<div class="card-header">
 									<div class="col text-center">
 										<h3 class="font-weight-light">Silahkan Login</h3>
-										<div class="status mt-3">
+										<div class="status mt-2">
 											<?= $this->session->flashdata('status'); ?>
 										</div>
 										<img src="<?= base_url('assets/assetGambar/') ?>logoKabupatenLebong.png" alt="logoKabupatenLebong" style="width:100px;" class="mb-3">
@@ -17,19 +17,9 @@
 								</div>
 								<div class="card-body">
 									<form action="<?= base_url('AuthController/actionLogin') ?>" method="POST">
-										<!-- <div class="form-group">
-                      <label class="small mb-3" for="email">ROLES</label>
-                      <select class="custom-select" id="inputGroupSelect01">
-                        <option selected>Choose...</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
-                      <?= form_error('email', '  <small class="text-danger  mb-3 ml-2">', '</small>') ?>
-                    </div> -->
 										<div class="form-group">
 											<label class="small mb-3" for="email">USERNAME</label>
-											<input class="form-control py-4" name="email" id="email" type="text" placeholder="Masukan UserName" autofocus value="<?= set_value('email'); ?>" />
+											<input class="form-control py-4" name="email" id="email" type="text" placeholder="Masukan UserName" value="<?= set_value('email'); ?>" autofocus />
 											<?= form_error('email', '  <small class="text-danger  mb-3 ml-2">', '</small>') ?>
 										</div>
 										<div class="form-group">

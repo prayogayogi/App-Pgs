@@ -33,28 +33,28 @@
 											<a href="#" data-toggle="modal" data-target="#exampleModalDataPenduduk" class="btn btn-primary"><i class="fas fa-plus mr-2"></i> Tambah Data</a>
 										</div>
 										<div class="card-body">
-											<table id="example1" class="table text-center table-bordered table-striped">
+											<table id="example1" class="table table-bordered table-striped">
 												<thead>
 													<tr>
-														<th>No</th>
+														<th class="text-center">No</th>
 														<th>Email</th>
 														<th>Facebook</th>
 														<th>Instagram</th>
 														<th>Twitter</th>
 														<th>Tik-tok</th>
-														<th>Action</th>
+														<th class="text-center">Action</th>
 													</tr>
 												</thead>
 												<tbody>
 													<?php foreach ($getSosialMedia as $data) : ?>
 														<tr>
-															<td><?= $no++ ?></td>
+															<td class="text-center"><?= $no++ ?></td>
 															<td><?= $data['email']; ?></td>
 															<td><?= $data['facebook']; ?></td>
 															<td><?= $data['instagram']; ?></td>
 															<td><?= $data['twitter']; ?></td>
 															<td><?= $data['tik-tok']; ?></td>
-															<td>
+															<td class="text-center">
 																<a href="#" data-toggle="modal" data-target="#modalUbahDataPenduduk<?= $data['id'] ?>" class="btn btn-primary"><i class="fas fa-pen-square"></i></a>
 
 																<a type="submit" href="<?= base_url('Admin/AssetSekolahController/destroyInformasi/') . $data['id'] ?>" onclick=" return confirm('Yakin Ingin Menghapus.?')" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>

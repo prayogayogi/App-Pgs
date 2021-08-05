@@ -33,24 +33,24 @@
 											<a href="#" data-toggle="modal" data-target="#exampleModalDataPenduduk" class="btn btn-primary"><i class="fas fa-plus mr-2"></i> Tambah Data</a>
 										</div>
 										<div class="card-body">
-											<table id="example1" class="table text-center table-bordered table-striped">
+											<table id="example1" class="table table-bordered table-striped">
 												<thead>
 													<tr>
-														<th>No</th>
+														<th class="text-center">No</th>
 														<th>Judul</th>
-														<th>Foto</th>
-														<th>Action</th>
+														<th class="text-center">Foto</th>
+														<th class="text-center">Action</th>
 													</tr>
 												</thead>
 												<tbody>
 													<?php foreach ($getInformasi as $data) : ?>
 														<tr>
-															<td><?= $no++ ?></td>
+															<td class="text-center"><?= $no++ ?></td>
 															<td><?= $data['judul']; ?></td>
-															<td>
-																<img src="<?= base_url('/assets/assetGambar/informasi/') . $data['foto'] ?>" alt="administrator" width="40px">
+															<td class="text-center">
+																<img src="<?= base_url('/assets/assetGambar/informasi/') . $data['foto'] ?>" alt="administrator" width="40px" class="rounded">
 															</td>
-															<td>
+															<td class="text-center">
 																<a href="#" data-toggle="modal" data-target="#modalUbahDataPenduduk<?= $data['id'] ?>" class="btn btn-primary"><i class="fas fa-pen-square"></i></a>
 
 																<a type="submit" href="<?= base_url('Admin/AssetSekolahController/destroyInformasi/') . $data['slug_judul'] ?>" onclick=" return confirm('Yakin Ingin Menghapus.?')" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>

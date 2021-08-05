@@ -69,7 +69,7 @@
 				<div class="col-lg-3 col-6">
 					<div class="small-box bg-danger">
 						<div class="inner">
-							<h5>Jumlah User App</h5>
+							<h5>Jumlah User Aplikasi</h5>
 
 							<h4 class="font-weight-bold"><?= $numGuru + $numAdmin; ?></h4>
 						</div>

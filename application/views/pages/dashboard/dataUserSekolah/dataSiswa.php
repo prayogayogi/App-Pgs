@@ -33,24 +33,24 @@
 											<a href="#" data-toggle="modal" data-target="#exampleModalDataPenduduk" class="btn btn-primary"><i class="fas fa-plus mr-2"></i> Tambah Data</a>
 										</div>
 										<div class="card-body">
-											<table id="example1" class="table text-center table-bordered table-striped">
+											<table id="example1" class="table table-bordered table-striped">
 												<thead>
 													<tr>
-														<th>No</th>
+														<th class="text-center">No</th>
 														<th>Nama</th>
 														<th>No Nis</th>
 														<th>Tempat Lahir</th>
-														<th>Action</th>
+														<th class="text-center">Action</th>
 													</tr>
 												</thead>
 												<tbody>
 													<?php foreach ($getSiswa as $data) : ?>
 														<tr>
-															<td><?= $no++ ?></td>
+															<td class="text-center"><?= $no++ ?></td>
 															<td><?= $data['nama']; ?></td>
 															<td><?= $data['nis']; ?></td>
 															<td><?= $data['tempat_lahir']; ?></td>
-															<td>
+															<td class="text-center">
 																<a href="#" data-toggle="modal" data-target="#modalUbahDataGuru<?= $data['id'] ?>" class="btn btn-primary"><i class="fas fa-pen-square"></i></a>
 
 																<a type="submit" href="<?= base_url('Admin/DataUserSekolahController/destroySiswa/') . $data['id'] ?>" onclick=" return confirm('Yakin Ingin Menghapus.?')" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
