@@ -7,6 +7,9 @@ class AssetSekolahController extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model(['AssetSekolahModel', 'AuthModel']);
+		if (!$this->session->userdata('email')) {
+			redirect('AuthController');
+		}
 	}
 	// UNTUK STRUKTUR ORGANISASI
 	// get & View Struktur Organisasi

@@ -31,9 +31,8 @@ class AuthController extends CI_Controller
 			$email = $this->input->post('email');
 			$password = $this->input->post('password');
 			$data = $this->db->get_where('userapp', ['email' => $email])->row_array();
-			$dataGuru = $this->db->get_where('db_guru', ['email' => $email])->row_array();
-			if ($data || $dataGuru) {
-				if (password_verify($password, $data['password']) || password_verify($password, $dataGuru['password'])) {
+			if ($data) {
+				if (password_verify($password, $data['password'])) {
 					$session = [
 						'email' => $data['email'],
 						'nama' => $data['nama']
@@ -84,6 +83,9 @@ class AuthController extends CI_Controller
 	// Ubah Password
 	public function ubahPassword($id)
 	{
+		if (!$this->session->userdata('email')) {
+			redirect('AuthController');
+		}
 		$passwordLama = $this->input->post('passwordLama');
 		$passwordBaru = $this->input->post('passwordBaru');
 		$userLogin = $this->db->get_where('userapp', ['id' => $id])->row_array();

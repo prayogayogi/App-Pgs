@@ -7,6 +7,9 @@ class DataUserSekolahController extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model(['AuthModel', 'DataUserSekolahModel']);
+		if (!$this->session->userdata('email')) {
+			redirect('AuthController');
+		}
 	}
 
 	// UNTUK DATA GURU

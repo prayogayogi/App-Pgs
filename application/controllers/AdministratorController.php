@@ -8,6 +8,9 @@ class AdministratorController extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model(['authModel', 'UserAppModel']);
+		if (!$this->session->userdata('email')) {
+			redirect('AuthController');
+		}
 	}
 
 	// get data Administrator
