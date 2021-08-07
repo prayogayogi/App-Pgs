@@ -57,6 +57,13 @@ class AssetSekolahModel extends CI_Model
 		}
 	}
 
+	// Destroy Orfanisasi
+	function destroyOrganisasi($id)
+	{
+		$this->db->where(['id' => $id]);
+		$this->db->delete('struktur_organisasi');
+	}
+
 	// UNTUK VISI DAN MISI
 	// Get Data Visi & Misi
 	function getVisiMisi()

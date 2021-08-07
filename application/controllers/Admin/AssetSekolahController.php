@@ -19,6 +19,7 @@ class AssetSekolahController extends CI_Controller
 		$data['no'] = 1;
 		$data['userLogin'] = $this->AuthModel->getUserLogin()->row_array();
 		$data['getOrganisasi'] = $this->AssetSekolahModel->getData()->result_array();
+		$data['cekgetOrganisasi'] = $this->AssetSekolahModel->getData()->row_array();
 		$this->load->view('includes/Admin/header', $data);
 		$this->load->view('includes/Admin/sidebar', $data);
 		$this->load->view('pages/dashboard/assetSekolah/strukturOrganisasi', $data);
@@ -44,6 +45,19 @@ class AssetSekolahController extends CI_Controller
 		$this->AssetSekolahModel->update();
 		$this->session->set_flashdata('status', '<div class="alert alert-success alert-dismissible fade show" role="alert">
     <strong>Data Struktur Organisasi</strong> Berhasil Di Ubah..
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>');
+		redirect('Admin/AssetSekolahController/struktur');
+	}
+
+	// Destroy Organisasi
+	public function destroyOrganisasi($id)
+	{
+		$this->AssetSekolahModel->destroyOrganisasi($id);
+		$this->session->set_flashdata('status', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Data Struktur Organisasi</strong> Berhasil Di Hapus..
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>
@@ -165,6 +179,7 @@ class AssetSekolahController extends CI_Controller
 		$data['no'] = 1;
 		$data['userLogin'] = $this->AuthModel->getUserLogin()->row_array();
 		$data['getSosialMedia'] = $this->AssetSekolahModel->getSosialMedia()->result_array();
+		$data['cekgetSosialMedia'] = $this->AssetSekolahModel->getSosialMedia()->row_array();
 		$this->load->view('includes/Admin/header', $data);
 		$this->load->view('includes/Admin/sidebar', $data);
 		$this->load->view('pages/dashboard/assetSekolah/sosialMedia', $data);

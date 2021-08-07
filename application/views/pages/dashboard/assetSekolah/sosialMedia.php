@@ -29,9 +29,11 @@
 							<div class="row">
 								<div class="col">
 									<div class="card">
-										<div class="card-header">
-											<a href="#" data-toggle="modal" data-target="#exampleModalDataPenduduk" class="btn btn-primary"><i class="fas fa-plus mr-2"></i> Tambah Data</a>
-										</div>
+										<?php if (!$cekgetSosialMedia['id']) : ?>
+											<div class="card-header">
+												<a href="#" data-toggle="modal" data-target="#exampleModalDataPenduduk" class="btn btn-primary"><i class="fas fa-plus mr-2"></i> Tambah Data</a>
+											</div>
+										<?php endif; ?>
 										<div class="card-body">
 											<table id="example1" class="table table-bordered table-striped">
 												<thead>

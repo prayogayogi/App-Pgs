@@ -29,9 +29,11 @@
 							<div class="row">
 								<div class="col">
 									<div class="card">
-										<div class="card-header">
-											<a href="#" data-toggle="modal" data-target="#exampleModalDataPenduduk" class="btn btn-primary"><i class="fas fa-plus mr-2"></i> Tambah Data</a>
-										</div>
+										<?php if (!$cekgetOrganisasi['struktur']) : ?>
+											<div class="card-header">
+												<a href="#" data-toggle="modal" data-target="#exampleModalDataPenduduk" class="btn btn-primary"><i class="fas fa-plus mr-2"></i> Tambah Data</a>
+											</div>
+										<?php endif; ?>
 										<div class="card-body">
 											<table id="example1" class="table table-bordered table-striped">
 												<thead>
@@ -52,6 +54,8 @@
 															</td>
 															<td class="text-center">
 																<a href="#" data-toggle="modal" data-target="#modalUbahDataPenduduk<?= $data['id'] ?>" class="btn btn-primary"><i class="fas fa-pen-square"></i></a>
+
+																<a type="submit" href="<?= base_url('Admin/AssetSekolahController/destroyOrganisasi/') . $data['id'] ?>" onclick=" return confirm('Yakin Ingin Menghapus.?')" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
 															</td>
 														</tr>
 													<?php endforeach; ?>
