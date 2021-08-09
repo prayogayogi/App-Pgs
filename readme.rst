@@ -1,5 +1,3 @@
-![pgs](https://user-images.githubusercontent.com/75689285/128671585-be8bfccc-10ec-430c-b35f-91402af8cbd7.png)
-
 ###################
 What is CodeIgniter
 ###################
