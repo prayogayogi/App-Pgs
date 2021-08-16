@@ -55,7 +55,7 @@
 															<td class="text-center">
 																<a href="#" data-toggle="modal" data-target="#modalUbahDataPenduduk<?= $data['id'] ?>" class="btn btn-primary"><i class="fas fa-pen-square"></i></a>
 
-																<a type="submit" href="<?= base_url('DataPendudukController/hapusDataPenduduk/') . $data['id'] ?>" onclick=" return confirm('Yakin Ingin Menghapus.?')" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+																<a type="submit" href="<?= base_url('AdministratorController/hapusAdministrator/') . $data['id'] ?>" onclick=" return confirm('Yakin Ingin Menghapus.?')" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
 
 																<a href="#" data-toggle="modal" data-target="#staticBackdrop<?= $data['id'] ?>" class="btn btn-info"><i class="fas fa-plus-square"></i></a>
 															</td>
@@ -179,7 +179,6 @@
 		</div>
 	</div>
 <?php endforeach; ?>
-
 
 <!-- Modal Untuk Detail data Admin -->
 <?php foreach ($getAdmin as $data) : ?>

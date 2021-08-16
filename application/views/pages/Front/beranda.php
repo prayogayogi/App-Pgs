@@ -1,4 +1,4 @@
-<div class="hero-wrap" style="background-image: url('<?= base_url('assets/FrontAssets/') ?>images/new.jpg'); background-attachment:fixed;">
+<div class="hero-wrap" style="background-image: url('<?= base_url('assets/FrontAssets/') ?>images/atas.jpg'); background-attachment:fixed;">
 	<div class="overlay"></div>
 	<div class="container">
 		<div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
@@ -60,12 +60,12 @@
 	</div>
 </section>
 
-<section class="ftco-section-3 img" style="background-image: url(<?= base_url('assets/FrontAssets/') ?>images/bgNew.jpg);">
+<section class="ftco-section-3 img" style="background-image: url(<?= base_url('assets/FrontAssets/') ?>images/lab.jpg);">
 	<div class="overlay"></div>
 	<div class="container">
 		<div class="row d-md-flex justify-content-center">
 			<div class="col-md-9 about-video text-center">
-				<h2 class="ftco-animate">Sma Negri 5 Ujan Mas Adalah Sekolah Terakreditasi (A) Di Kabupaten Kepahiyang</h2>
+				<h2 class="ftco-animate">Smk Negri 05 Ujan Mas Adalah Sekolah Terakreditasi (A) Di Kabupaten Kepahiyang</h2>
 				<div class="video d-flex justify-content-center">
 					<a href="https://www.youtube.com/watch?v=dpG77oZ-X1k" class="button popup-vimeo d-flex justify-content-center align-items-center"><span class="ion-ios-play"></span></a>
 				</div>

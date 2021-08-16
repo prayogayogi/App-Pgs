@@ -157,7 +157,7 @@ class AssetSekolahModel extends CI_Model
 	{
 		$file = $_FILES['foto'];
 		if ($file) {
-			$config['allowed_types']  = 'gif|jpg|png';
+			$config['allowed_types']  = 'gif|jpg|png|jpeg';
 			$config['max_size']       = '2048';
 			$config['upload_path']    = './assets/assetGambar/informasi/';
 			$this->load->library('upload', $config);

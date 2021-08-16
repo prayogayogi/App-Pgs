@@ -1,10 +1,10 @@
-<footer class="ftco-footer ftco-bg-dark ftco-section img" style="background-image: url(<?= base_url('assets/FrontAssets/') ?>images/new.jpg); background-attachment:fixed;">
+<footer class="ftco-footer ftco-bg-dark ftco-section img" style="background-image: url(<?= base_url('assets/FrontAssets/') ?>images/atas.jpg); background-attachment:fixed;">
 	<div class="overlay"></div>
 	<div class="container">
 		<div class="row mb-5">
 			<div class="col-md-3">
 				<div class="ftco-footer-widget mb-4">
-					<h2><a class="navbar-brand" href="<?= base_url('FrontController') ?>">SMK 05 Ujan Mas <br><small>Kepahiang</small></a></h2>
+					<h2><a class="navbar-brand" href="<?= base_url('FrontController') ?>">SMK N 05 Ujan Mas <br><small>Kepahiang</small></a></h2>
 					<p>Smk N 05 Ujan Mas Kabupaten Kepahiang Merupakan Smk Yang Sanggat Mementingkan Kualitas dan Menghasilkan Lulusan Terbaik.</p>
 					<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
 						<li class="ftco-animate"><a href="<?= $getSosialMedia['twitter'] ?>" target="blank"><span class="icon-twitter"></span></a></li>
@@ -47,9 +47,9 @@
 					<h2 class="ftco-heading-2">Punya Pertanyaan?</h2>
 					<div class="block-23 mb-3">
 						<ul>
-							<li><span class="icon icon-map-marker"></span><span class="text">Jl. Pangeran. Kabawetan, Kepahiang, Bengkulu, Indonesia</span></li>
-							<li><a href="#"><span class="icon icon-phone"></span><span class="text">+62 823 5432 5086</span></a></li>
-							<li><a href="#"><span class="icon icon-envelope"></span><span class="text">smk05ujanmas@gmail.com</span></a></li>
+							<li><span class="icon icon-map-marker"></span><span class="text">JL. RAYA KEPAHIANG-CURUP, Pekalongan, Kec. Ujan Mas, Kab. Kepahiang Prov. Bengkulu</span></li>
+							<li><a href="#"><span class="icon icon-phone"></span><span class="text">073222668</span></a></li>
+							<li><a href="#"><span class="icon icon-envelope"></span><span class="text">smknvkph@gmail.com</span></a></li>
 						</ul>
 					</div>
 				</div>
@@ -60,7 +60,7 @@
 				<p>
 					Copyright &copy;<script>
 						document.write(new Date().getFullYear());
-					</script> All rights reserved | <i class="icon-heart" aria-hidden="true"></i> by <a href="#" target="_blank">KodingDev</a>
+					</script> All rights reserved | <i class="icon-heart" aria-hidden="true"></i> by <a href="#" target="_blank">Smk N 05 Ujan Mas</a>
 				</p>
 			</div>
 		</div>

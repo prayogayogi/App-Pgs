@@ -1,4 +1,4 @@
-<div class="hero-wrap hero-wrap-2" style="background-image: url('<?= base_url('assets/FrontAssets/') ?>images/new.jpg'); background-attachment:fixed;">
+<div class="hero-wrap hero-wrap-2" style="background-image: url('<?= base_url('assets/FrontAssets/') ?>images/atas.jpg'); background-attachment:fixed;">
 	<div class="overlay"></div>
 	<div class="container">
 		<div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
@@ -15,7 +15,7 @@
 	<div class="container">
 		<div class="row d-flex">
 			<div class="col-md-6 d-flex ftco-animate">
-				<div class="img img-about align-self-stretch" style="background-image: url(<?= base_url('assets/FrontAssets/') ?>images/bgNew.jpg); width: 100%;"></div>
+				<div class="img img-about align-self-stretch" style="background-image: url(<?= base_url('assets/FrontAssets/') ?>images/compres.jpg); width: 100%;"></div>
 			</div>
 			<div class="col-md-6 pl-md-5 ftco-animate">
 				<h2 class="mb-4">SMKN 5 Ujan Mas Kabupaten Kepahiang</h2>

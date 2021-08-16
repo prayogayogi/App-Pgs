@@ -13,7 +13,7 @@ class AdministratorController extends CI_Controller
 		}
 	}
 
-	// get data Administrator
+	// Get data Administrator
 	public function index()
 	{
 		$data['title'] = "Admin";
@@ -39,9 +39,23 @@ class AdministratorController extends CI_Controller
 		redirect('AdministratorController');
 	}
 
+	// Ubah data admin
 	public function ubahDataAdmin($id)
 	{
 		$this->UserAppModel->updateDataAdmin($id);
+		$this->session->set_flashdata('status', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Data Admisistrator</strong> Berhasil Diubah.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>');
+		redirect('AdministratorController');
+	}
+
+	// Hapus data admin
+	public function hapusAdministrator($id)
+	{
+		$this->UserAppModel->hapusAdministrator($id);
 		$this->session->set_flashdata('status', '<div class="alert alert-success alert-dismissible fade show" role="alert">
     <strong>Data Admisistrator</strong> Berhasil Diubah.
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
