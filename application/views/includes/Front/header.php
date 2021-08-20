@@ -35,7 +35,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
 			<!-- <i class="flaticon-university"></i> -->
-			<a class="navbar-brand" href="<?= base_url('FrontController') ?>">SMK 05 Ujan Mas<br><small>Kepahiang</small></a>
+			<a class="navbar-brand" href="<?= base_url('FrontController') ?>">SMK N 5 Ujan Mas<br><small>Kepahiang</small></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="oi oi-menu"></span> Menu
 			</button>

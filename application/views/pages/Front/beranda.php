@@ -65,7 +65,7 @@
 	<div class="container">
 		<div class="row d-md-flex justify-content-center">
 			<div class="col-md-9 about-video text-center">
-				<h2 class="ftco-animate">Smk Negri 05 Ujan Mas Adalah Sekolah Terakreditasi (A) Di Kabupaten Kepahiyang</h2>
+				<h2 class="ftco-animate">Smk Negri 05 Ujan Mas Adalah Sekolah Terakreditasi (B) Di Kabupaten Kepahiyang</h2>
 				<div class="video d-flex justify-content-center">
 					<a href="https://www.youtube.com/watch?v=dpG77oZ-X1k" class="button popup-vimeo d-flex justify-content-center align-items-center"><span class="ion-ios-play"></span></a>
 				</div>
